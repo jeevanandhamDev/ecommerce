@@ -1,0 +1,248 @@
+<header class="ur_header_section primary-bg-color header-sticky" th:fragment="header">
+    <div class="topbar py-2 bottom-border d-none d-lg-block">
+        <div class="container-large">
+            <div class="row align-items-center">
+                <div class="col-xl-7 col-lg-8">
+                    <div class="topbar-info d-flex align-items-center gap-48 flex-wrap">
+                        <span class="text-white item-single">
+                            <a href="tel:9791139308" class="text-white">+91 97911 39308</a>
+                        </span>
+                                            <span class="text-white item-single">FREE SHIPPING ON ALL ORDERS</span>
+
+                                            <!-- Show Welcome Message -->
+                                            <span class="text-white item-single">
+                            <th:block th:if="${session.loggedInUser != null}">
+                                Welcome, <span th:text="${session.loggedInUser.name}">User</span>
+                            </th:block>
+                        </span>
+                    </div>
+
+                </div>
+                <div class="col-xl-5 col-lg-4">
+                    <div class="d-flex align-items-center justify-content-end gap-48 topbar-info flex-wrap">
+<!--                        <div class="ur-header-select item-single">-->
+<!--                            <select>-->
+<!--                                <option>EN</option>-->
+<!--                                <option>BN</option>-->
+<!--                                <option>CN</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+<!--                        <div class="ur-header-select item-single">-->
+<!--                            <select>-->
+<!--                                <option>USD</option>-->
+<!--                                <option>BDT</option>-->
+<!--                                <option>CNY</option>-->
+<!--                                <option>INR</option>-->
+<!--                            </select>-->
+<!--                        </div>-->
+                        <a href="/shop" class="item-single text-uppercase">store</a>
+                        <a href="https://www.instagram.com/jb_makeups/" class="item-single text-uppercase"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/jb.makeupsofficial/" class="item-single text-uppercase"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.youtube.com/@JBMakeups" class="item-single text-uppercase"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-wrapper">
+        <div class="container-large">
+            <div class="row align-items-center">
+                <div class="col-xl-2 col-6">
+                    <a href="/" class="logo-white"><img src="images/logo.png" alt="logo" class="img-fluid"></a>
+                </div>
+                <div class="col-xxl-7 col-xl-8 d-none d-xl-block">
+                    <nav class="ur-navmenu">
+                        <ul>
+                            <li class="has-submenu">
+                                <a href="javascript:void(0)">Home</a>
+                                <ul class="submenu-wrapper">
+                                    <li><a href="/">Home Page 1</a></li>
+                                    <li><a href="index-2.html">Home Page 2</a></li>
+                                    <li><a href="index-3.html">Home Page 3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li class="has-submenu"><a href="javascript:void(0)">Pages</a>
+
+                                <div class="ur-megamenu">
+                                    <div class="megamenu-row">
+                                        <div class="megamenu-column border-r">
+                                            <h6 class="column-title">Product Pages</h6>
+                                            <ul class="pages-list">
+                                                <li><a href="/shop">Shop Page</a></li>
+                                                <li><a href="shop-list.html">Shop List</a></li>
+                                                <li><a href="product-details.html">Product Details</a></li>
+                                                <li><a href="#">Shop Layout 04</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="megamenu-column border-r">
+                                            <h6 class="column-title">Filter Layout</h6>
+                                            <ul class="pages-list">
+                                                <li><a href="shop-list.html">Filter Sidebar</a></li>
+                                                <li><a href="#">Filter On Top</a></li>
+                                                <li><a href="shop.html">Filter Side Out</a></li>
+                                                <li><a href="product-details.html">Modal Filter</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="megamenu-column border-r">
+                                            <h6 class="column-title">Product Type</h6>
+                                            <ul class="pages-list">
+                                                <li><a href="shop-list.html">Filter Sidebar</a></li>
+                                                <li><a href="#">Filter On Top</a></li>
+                                                <li><a href="shop.html">Filter Side Out</a></li>
+                                                <li><a href="product-details.html">Modal Filter</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="megamenu-column">
+                                            <h6 class="column-title">Shop Pages</h6>
+                                            <ul class="pages-list">
+                                                <li><a href="login.html">My Account</a></li>
+                                                <li><a href="/cart">Cart</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                                <li><a href="order-tracking.html">Order Tracking</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="megamenu-column banner">
+                                            <div class="megamenu-banner">
+                                                <a href="product-details.html" class="p-0"><img src="images/banner/banner-1.jpg" alt="not found" class="img-fluid"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="has-submenu"><a href="javascript:void(0)">Blog</a>
+                                <ul class="submenu-wrapper">
+                                    <li><a href="blog.html">Blog List</a></li>
+                                    <li><a href="blog-single.html">Blog Details</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-submenu"><a href="javascript:void(0)">Shop</a>
+                                <ul class="submenu-wrapper">
+                                    <li><a href="shop.html">Shop Grid</a></li>
+                                    <li><a href="shop-list.html">Shop List</a></li>
+                                    <li><a href="product-details.html">Product Details</a></li>
+                                    <li><a href="product-details-2.html">Product Details V2</a></li>
+                                    <li><a href="product-details-3.html">Product Details V3</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="/contactUs">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-xxl-3 col-xl-2 col-6">
+                    <div class="ur-header-right d-flex align-items-center justify-content-end">
+                        <div class="ur-user-links position-relative">
+                            <button type="button" class="user-btn">
+                                <i class="fa-regular fa-user"></i>
+                            </button>
+                            <ul class="position-absolute user-menu">
+                                <!-- Show if user is logged in -->
+                                <li th:if="${session.loggedInUser != null}">
+                                    <a href="/account">My Account</a>
+                                </li>
+                                <li th:if="${session.loggedInUser != null}">
+                                    <a href="/userLogout">Logout</a>
+                                </li>
+
+                                <!-- Show if user is NOT logged in -->
+                                <li th:if="${session.loggedInUser == null}">
+                                    <a href="/userLogin">Login</a>
+                                </li>
+                                <li th:if="${session.loggedInUser == null}">
+                                    <a href="/register">Sign Up</a>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <div class="user-cart d-none d-sm-block">
+                            <a href="/cart">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+
+                            </a>
+                        </div>
+                        <div class="d-sm-none">
+                            <a href="/cart" class="header-link"><i class="fa-solid fa-basket-shopping"></i></a>
+                        </div>
+                        <div class="header-search d-none d-sm-block">
+                            <div class="dropdown">
+                                <button class="search-btn" data-bs-toggle="dropdown"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                <div class="dropdown-menu dropdown-menu-end">
+                                    <form class="search-form d-flex align-items-center gap-2">
+                                        <input type="text" placeholder="Search..." class="theme-input bg-transparent">
+                                        <button type="submit" class="submit-btn">Go</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-sm-none">
+                            <a href="javascript:void(0)" class="header-link header-search-open"><i class="fa-solid fa-magnifying-glass"></i></a>
+                        </div>
+                        <div class="header-toggle">
+                            <button type="button" class="ur3-header-toggle offcanvus-toggle d-none d-xl-inline-block">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                            <button type="button" class="ur3-header-toggle mobile-menu-toggle d-xl-none">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    <style>-->
+<!--        .product-card {-->
+<!--            display: inline-block;-->
+<!--            margin: 10px;-->
+<!--            transition: transform 0.3s, box-shadow 0.3s;-->
+<!--        }-->
+
+<!--        .product-image {-->
+<!--            width: 150px;-->
+<!--            height: 150px;-->
+<!--            object-fit: cover;-->
+<!--            border-radius: 10px;-->
+<!--            transition: transform 0.3s ease;-->
+<!--        }-->
+
+<!--        .product-card:hover .product-image {-->
+<!--            transform: scale(1.05);-->
+<!--            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);-->
+<!--        }-->
+<!--    </style>-->
+
+<!--    <div id="categoryCarousel" class="carousel slide" data-bs-ride="carousel">-->
+<!--        <div class="carousel-inner" th:if="${partitionedProducts != null}">-->
+<!--            <div th:each="productChunk, iterStat : ${partitionedProducts}"-->
+<!--                 th:class="'carousel-item' + ${iterStat.index == 0 ? ' active' : ''}">-->
+<!--                <div class="d-flex justify-content-center flex-wrap gap-3">-->
+<!--                    <div th:each="product : ${productChunk}" class="product-card">-->
+<!--                        <a th:href="@{'/shop/category/' + ${product.category}}">-->
+<!--                            <img th:src="@{${product.imagePath}}"-->
+<!--                                 th:alt="${product.productName}"-->
+<!--                                 class="product-image" />-->
+<!--                        </a>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <button class="carousel-control-prev" type="button" data-bs-target="#categoryCarousel" data-bs-slide="prev">-->
+<!--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>-->
+<!--            <span class="visually-hidden">Previous</span>-->
+<!--        </button>-->
+<!--        <button class="carousel-control-next" type="button" data-bs-target="#categoryCarousel" data-bs-slide="next">-->
+<!--            <span class="carousel-control-next-icon" aria-hidden="true"></span>-->
+<!--            <span class="visually-hidden">Next</span>-->
+<!--        </button>-->
+<!--    </div>-->
+
+
+
+</header>
