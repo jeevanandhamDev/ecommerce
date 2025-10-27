@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JB</title>
+
+    <!--Essential css files-->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!--favicon-->
+    <link rel="icon" href="images/favicon.png">
+
+
+    <style>
+        .full-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.7s ease;
+        }
+
+        .full-content.open {
+            max-height: 500px; /* Adjust height as needed */
+        }
+
+        .feature-image {
+    position: relative;
+    overflow: hidden;
+}
+.product-overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+.feature-image:hover .product-overlay {
+    opacity: 1;
+}
+.product-btns a {
+    margin: 0 5px;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+    </style>
+
+
+
+</head>
+<body>
+
+<!--    preloader start-->
+    <div class="preloader">
+        <h1 class="display-1">JB Glam</h1>
+        <div class="preload-progress">
+            <span></span>
+        </div>
+    </div>
+<!--    preloader end-->
+
+    <!--header section start-->
+    <div th:replace="~{fragments/header2 :: header2}"></div>
+    <!--header section end-->
+
+    <!--offcanvus start-->
+    <div class="offcanvus-box position-fixed bg-white">
+        <a href="javascript:void(0)" class="offcanvus-close"><i class="fa-solid fa-xmark"></i></a>
+        <div class="content-top mb-100">
+            <a href="index.html" class="offcanvus-logo"><img src="images/logo-black.png" alt="logo"></a>
+            <p class="mb-0 mt-32 fw-light">Distrak Street 2SK Line, Germanygalore@inside-support.com (+125) 2156-2145</p>
+        </div>
+        <div class="offcanvus-gallery d-flex align-items-center flex-wrap">
+            <a href="#"><img src="images/gallery/1.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/2.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/3.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/4.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/5.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/6.jpg" alt="not found"></a>
+        </div>
+        <div class="offcanvus-newsletter">
+            <h4 class="mb-4 text-center">Newsletter</h4>
+            <form action="#">
+                <input type="email" placeholder="Enter your e-mail" class="theme-input">
+                <button type="submit" class="template-btn primary-btn mt-3 w-100"><span>SUBSCRIBE NOW</span></button>
+            </form>
+        </div>
+        <div class="offcanvus-bottom d-flex align-items-center justify-content-between">
+            <div class="language-switcher">
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown"><img src="images/icons/flag-usa.png" alt="flag">English <span><i class="fas fa-angle-down"></i></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><img src="images/icons/flag-bd.jpg" alt="flag">Bangla</a></li>
+                        <li><a href="#"><img src="images/icons/flag-india.jpg" alt="flag">Hindi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="currency-switcher">
+                <select>
+                    <option>USD</option>
+                    <option>BDT</option>
+                    <option>CNY</option>
+                </select>
+            </div>
+            <div class="user-links">
+                <a href="login.html"><span class="me-2"><i class="fa-regular fa-user"></i></span>Account</a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvus end-->
+
+    <!--mobile menu start-->
+    <div class="mobile-menu">
+        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+        <a href="#" class="logo"><img src="images/logo-black.jpg" alt="logo" class="img-fluid"></a>
+        <ul class="mobile-nav-menu">
+            <li class="has-submenu">
+                <a href="javascript:void(0)">Home</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="index.html">Home Page 1</a></li>
+                    <li><a href="index-2.html">Home Page 2</a></li>
+                    <li><a href="index-3.html">Home Page 3</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li class="has-submenu"><a href="javascript:void(0)">Pages</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="order-tracking.html">Order Tracking</a></li>
+                </ul>
+                
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Blog</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="blog.html">Blog List</a></li>
+                    <li><a href="blog-single.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Shop</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="shop.html">Shop Grid</a></li>
+                    <li><a href="shop-list.html">Shop List</a></li>
+                    <li><a href="product-details.html">Product Details</a></li>
+                    <li><a href="product-details-2.html">Product Details V2</a></li>
+                    <li><a href="product-details-3.html">Product Details V3</a></li>
+                </ul>
+            </li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <form class="mobile-search d-flex align-items-center mt-5" action="#">
+            <input type="text" placeholder="Search..." class="theme-input">
+            <button type="submit" class="template-btn primary-btn"><span>Go</span></button>
+        </form>
+    </div>
+    <!--mobile menu end-->
+
+    <!--search form start-->
+    <div class="ur-search-form">
+        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+        <form action="#" class="d-flex align-items-center">
+            <input type="text" placeholder="Search...." class="theme-input">
+            <button type="submit" class="submit-btn">Go</button>
+        </form>
+    </div>
+    <!--search form end-->
+
+    <!--cart drawer start-->
+    <div class="cart-drawer position-fixed">
+        <div class="drawer-close d-flex align-items-center justify-content-between position-absolute start-0 top-0 w-100 px-4 py-4 border-bottom">
+            <h6 class="mb-0">Shopping Cart</h6>
+            <a href="javascript:void(0)" class="drawer-close"><i class="fas fa-xmark"></i></a>
+        </div>
+        <ul class="cart-list">
+            <li class="d-flex align-items-center gap-3">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="images/products/product-1.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Weeding Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="images/products/product-2.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Diamond Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="images/products/product-3.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Bracelets Gold</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="drawer-bottom border-top">
+            <div class="d-flex align-items-center justify-content-between mt-4">
+                <h6 class="mb-0">Total:</h6>
+                <span class="fw-medium secondary-text-color">$750.00</span>
+            </div>
+            <a href="cart.html" class="template-btn primary-btn text-uppercase fw-medium w-100 text-center mt-4"><span>View Cart & Check Out</span></a>
+        </div>
+    </div>
+    <!--cart drawer end-->
+
+
+    <!--hero section start-->
+    <section class="ur-hero-section position-relative z-1 overflow-hidden" data-background="images/bg/hero-bg.jpg">
+        <span class="circle-white position-absolute z--1 rounded-circle"></span>
+        <img src="images/shapes/circle-1.png" alt="circle" class="position-absolute end-0 bottom-0 z--1 circle-color">
+        <div class="container">
+            <div class="ur-hero-slider slider-spacing">
+                <div class="ur-hero-single-slide">
+                    <div class="row align-items-center">
+                        <div class="col-xxl-5 col-xl-6">
+                            <div class="hero-left-content">
+                                <h5 class="hero-subtitle fw-normal mb-40">design by Andrew Holi</h5>
+                                <h1 class="hero-title mb-50">Hand Crafted Jewelry</h1>
+                                <a href="#" class="template-btn primary-btn"><span>Explore Now</span></a>
+                            </div>
+                        </div>
+                        <div class="col-xxl-7 col-xl-6">
+                            <div class="hero-right mt-5 mt-xl-0">
+                                <img src="images/home1/hero-girl-1.png" alt="girl" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ur-hero-single-slide">
+                    <div class="row align-items-center">
+                        <div class="col-xxl-5 col-xl-6">
+                            <div class="hero-left-content">
+                                <h5 class="hero-subtitle fw-normal mb-40">design by Andrew Holi</h5>
+                                <h1 class="hero-title mb-50">Fory Ring In Diamond</h1>
+                                <a href="#" class="template-btn primary-btn"><span>Explore Now</span></a>
+                            </div>
+                        </div>
+                        <div class="col-xxl-7 col-xl-6">
+                            <div class="hero-right mt-5 mt-xl-0">
+                                <img src="images/home1/hero-girl-2.png" alt="girl" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ur-hero-feature-card d-flex align-items-center bg-white">
+            <div class="item-thumb">
+                <a href="#"><img src="images/products/ring-sm.png" alt="product" class="img-fluid"></a>
+            </div>
+            <div>
+                <a href="#"><h5 class="mb-4 fw-normal">Deltanor Fory Ring in 24k Diamond</h5></a>
+                <div class="d-flex align-items-center product-meta gap-4">
+                    <a href="#" class="wish-btn"><i class="fa-regular fa-heart"></i></a>
+                    <a href="#" class="card-btn"><i class="fa-solid fa-plus"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--hero section end-->
+
+    <!--category section start-->
+<section class="ptb-120 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center mb-60">
+                    <h2 class="h1 fw-normal mb-4 wow fadeInUp" data-wow-duration="0.5s">Shop By Category</h2>
+                    <p class="mb-0 fw-light wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.5s">
+                        Our fashion jewellery is inspired by minimalism, focused on minimal simplicity, perfect for everyday wear and cherished for years.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="ur-category-slider slider-spacing">
+            <div th:if="${partitionedProducts != null and #lists.size(partitionedProducts) > 0}" class="position-relative pp-overlay-card overflow-hidden">
+                <div th:each="product : ${partitionedProducts[0]}">
+                    <img th:src="@{${product.imagePath}}" th:alt="${product.category}" class="img-fluid" width="624px" height="900px">
+                    <span class="category-title position-absolute" th:text="${product.category}"></span>
+                    <a th:href="@{'/shop/category/' + ${product.category}}" class="pp-overlay position-absolute">
+                        <span th:text="${product.category}"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--category section end-->
+
+    <!--newsticker area start-->
+    <div class="ur-ticker-area overflow-hidden">
+        <div class="ur-ticker-wrapper primary-bg-color">
+            <div class="ur-ticker">
+                <span class="text-white text-uppercase">Get 20% Discount on your first product</span>
+                <span class="text-white text-uppercase">DISCOVER LATEST COLLECTIONS AND TOP DESIGNERS </span>
+                <span class="text-white text-uppercase">10% DISCOUNT FOR REGISTERED USERS</span>
+                <span class="text-white text-uppercase">Get 20% Discount on your first product</span>
+                <span class="text-white text-uppercase">DISCOVER LATEST COLLECTIONS AND TOP DESIGNERS</span>
+                <span class="text-white text-uppercase">10% DISCOUNT FOR REGISTERED USERS</span>
+            </div>
+        </div>
+    </div>
+    <!--newsticker area end-->
+
+    <!--call to action start-->
+    <section class="ur-cta-section position-relative z-1 ptb-120 overflow-hidden bg-white">
+        <span class="bg-shape position-absolute z--1 light-bg"></span>
+        <div class="container"> 
+            <div class="row justify-content-center align-items-center g-5">
+                <div class="col-xl-5 col-lg-5">
+                    <div class="feature-image-wrapper">
+                        <div class="cta-image position-relative">
+                            <img src="images/products/rings.jpg" alt="rings" class="img-fluid feature-image wow fadeInUp" data-wow-duration="0.5s">
+                            <img src="images/shapes/shape-1.jpg" alt="shape" class="position-absolute shape-image d-none d-xl-block wow fadeInUp" data-wow-delay="0.3s">
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-xl-6 offset-xl-1 col-lg-7 ps-xl-5">
+                    <div class="ps-2 ur-cta-content">
+                        <h2 class="display-3 mb-32 fw-normal wow fadeInUp" data-wow-duration="0.5s">Antique<br>Diamond Necklaces</h2>
+                        <h6 class="mb-50 fw-light text-color wow fadeInUp" data-wow-delay="0.3s" data-wow-duration="0.5s">Vestibulam ipsum dolor, sit amet consectetur adipisicing elit. Possimus deserunt autem vel modi ab doloribus sit omnis iusto quo voluptas earum reiciendis molestias quam, dolorem laudantium molestiae</h6>
+                        <a href="#" class="template-btn primary-btn wow fadeInUp" data-wow-delay="0.5s" data-wow-duration="0.5s"><span>Discover More</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--call to action end-->
+
+    <!--featured products start-->
+<section class="pb-120 bg-white">
+    <div class="container pb-5 pb-sm-0">
+        <div class="row">
+            <div class="col-xl-7">
+                <div class="section-title">
+                    <h2 class="h1 fw-normal mb-50">Our Limited Edition</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Horizontal Scroll Carousel Style -->
+        <div class="feature-product-slider d-flex gap-4" style="scroll-snap-type: x mandatory; white-space: nowrap;">
+            <th:block th:each="product : ${limitedEditionProducts}">
+                <div class="ur-product-card position-relative" style="min-width: 250px; scroll-snap-align: start;">
+                    <!-- Discount Badge -->
+                    <span class="position-absolute ur-badge coupon-badge"
+                          th:if="${product.firstPrice != null and product.firstPrice > 0}">-50%</span>
+
+                    <!-- Product Image -->
+                    <div class="feature-image d-flex align-items-center justify-content-center light-bg position-relative" style="height: 250px; overflow: hidden;">
+                        <a th:href="@{/product-details/{id}(id=${product.id})}">
+                            <img th:src="@{${product.imagePath}}" alt="product" class="img-fluid" style="height: 100%; object-fit: cover;" />
+                        </a>
+                        <div class="product-overlay position-absolute">
+                            <div class="product-btns d-flex align-items-center justify-content-between" style="width: 200px;">
+                                <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i></a>
+                                <a href="javascript:void(0)"><i class="fa-solid fa-basket-shopping"></i></a>
+                                <!-- Eye icon that triggers the modal -->
+                                <a href="javascript:void(0)"
+                                   data-bs-toggle="modal"
+                                   th:attr="data-bs-target='#product_quickview__' + ${product.id}">
+                                    <i class="fa-regular fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Details -->
+                    <div class="mt-4">
+                        <a href="#" class="secondary-text-color text-uppercase" th:text="${product.category}">Category</a>
+                        <a th:href="@{/product-details/{id}(id=${product.id})}">
+                            <h5 class="my-2 fw-medium product-title" th:text="${product.productName}">Product Name</h5>
+                        </a>
+                        <span class="primary-text-color fs-sm fw-medium"
+                              th:text="${product.firstPrice != null} ? '₹' + ${product.firstPrice} : '₹0.00'">₹0.00</span>
+
+                    </div>
+                </div>
+            </th:block>
+        </div>
+    </div>
+
+    <!-- Quick View Modals for Each Product -->
+
+    <th:block th:each="product : ${limitedEditionProducts}">
+        <div class="modal fade" th:id="'product_quickview__' + ${product.id}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content p-4">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="feature-image bg-light">
+                                <img th:src="@{${product.imagePath}}" alt="Product Image" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="single-product-info">
+                                <a href="#" class="category-btn text-uppercase fs-sm secondary-text-color d-inline-block mb-3" th:text="${product.category}"></a>
+                                <h3 class="mb-4" th:text="${product.productName}"></h3>
+
+                                <div class="item-review d-flex align-items-center gap-3">
+                                    <ul class="rating-star d-flex align-items-center gap-1 fs-sm">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                    <span class="primary-text-color fw-light">(0 Customer reviews)</span>
+                                </div>
+
+                                <div class="pricing mt-4">
+                                    <span class="primary-text-color"
+                                          th:text="${product.firstPrice != null} ? '₹' + ${product.firstPrice} : '₹0.00'">₹0.00</span>
+                                </div>
+
+                                <div class="short-description mt-40">
+                                    <p class="mb-0 fw-light" th:text="${product.productDescription}"></p>
+                                </div>
+
+                                <ul class="single-product-features mt-40">
+                                    <li><span class="me-2"><i class="fas fa-truck"></i></span>Free shipping</li>
+                                    <li><span class="me-2"><i class="fas fa-undo-alt"></i></span>Free returns</li>
+                                </ul>
+
+                                <div class="d-flex align-items-center mt-40 gap-3 flex-wrap">
+                                    <div class="quantity-box">
+                                        <button type="button" class="drecrement"><i class="fa-solid fa-minus"></i></button>
+                                        <input type="text" value="1">
+                                        <button type="button" class="drecrement"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+
+                                    <button type="button"
+                                            onclick="addToCart(this)"
+                                            class="add_to_cart_btn"
+                                            th:data-name="${product.productName}"
+                                            th:data-imageurl="${product.imagePath}"
+                                            th:data-price="${#strings.replace(product.pricesJson, '[', '').replace(']', '').split(',')[0]}"
+                                            th:data-id="${product.id}">
+                                        Add to Cart
+                                        <span class="ms-2"><i class="fa-solid fa-basket-shopping"></i></span>
+                                    </button>
+
+                                    <button type="button" class="wish_btn">
+                                        <span class="me-2"><i class="fa-regular fa-heart"></i></span>
+                                        Add to Wishlist
+                                    </button>
+                                </div>
+
+                                <ul class="product-meta mt-32">
+                                    <li>SKU: <span th:text="${product.sku}"></span></li>
+                                    <li>Weights: <span th:text="${product.weightsJson}"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </th:block>
+
+</section>
+
+
+<!--featured products end -->
+
+    <!--deal section start-->
+<section class="primary-bg-color position-relative z-1 overflow-hidden deal-section">
+    <span class="dark-overlay d-none d-xxl-block"></span>
+    <div class="container">
+        <div class="row g-4 align-items-center">
+            <div class="col-xl-3">
+                <div>
+                    <h2 class="display-3 mb-5 text-white">Deal <br class="d-none d-xxl-block">Of The Day</h2>
+
+                    <!-- Tab Headers -->
+                    <ul class="nav nav-tabs ur-tab-control border-0">
+                        <li class="nav-item" th:each="category, iterStat : ${categories}">
+                            <a class="nav-link"
+                               th:href="'#' + ${category.toLowerCase()}"
+                               th:classappend="${iterStat.index == 0} ? ' active'"
+                               data-bs-toggle="tab"
+                               th:text="${iterStat.index + 1} + '. ' + ${#strings.capitalize(category)}">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-xl-9">
+                <div class="tab-content">
+                    <div th:each="category, iterStat : ${categories}"
+                         th:class="'tab-pane fade' + (${iterStat.index == 0} ? ' show active' : '')"
+                         th:id="${category.toLowerCase()}">
+                        <div class="row align-items-center g-4"
+                             th:if="${latestProductByCategory[category.toLowerCase()]} != null">
+                            <div class="col-xl-7 col-lg-7 col-md-6">
+                                <div class="banner-image ps-xl-5 mt-5 mt-xl-0">
+                                    <img th:src="@{${latestProductByCategory[category.toLowerCase()].imagePath}}"
+                                         alt="product"
+                                         class="img-fluid"/>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-4 col-lg-5 col-md-6 ps-md-4">
+                                <div class="ur-product-card position-relative bg-white">
+                                    <span class="ur-badge sale-badge position-absolute">SALE</span>
+
+                                    <div class="feature-image d-flex align-items-center justify-content-center position-relative">
+
+                                        <img th:src="@{${latestProductByCategory[category.toLowerCase()].imagePath}}"
+                                             alt="product"
+                                             class="img-fluid"/>
+
+
+                                        <div class="product-overlay position-absolute" style="width: 400px; z-index:5;">
+                                            <div class="product-btns d-flex align-items-center justify-content-between" style="width: 200px;">
+                                                <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i></a>
+                                                <a href="javascript:void(0)"><i class="fa-solid fa-basket-shopping"></i></a>
+                                                <a href="#" class=""
+                                                   data-bs-toggle="modal"
+                                                   th:attr="data-bs-target='#product_quickview__' + ${latestProductByCategory[category.toLowerCase()].id}">
+
+                                                <i class="fa-regular fa-eye"></i>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="text-center pb-40">
+                                        <a th:href="@{'/category/' + ${category.toLowerCase()}}"
+                                           class="secondary-text-color text-uppercase"
+                                           th:text="${category}">Category</a>
+                                        <a th:href="@{'/product/' + ${latestProductByCategory[category.toLowerCase()].id}}">
+                                            <h5 class="my-2 fw-medium product-title"
+                                                th:text="${latestProductByCategory[category.toLowerCase()].productName}">
+                                            </h5>
+                                        </a>
+                                        <span class="primary-text-color fs-sm fw-medium">
+                                            ₹<span th:text="${latestProductByCategory[category.toLowerCase()].firstPrice}">0.00</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- /row -->
+                    </div> <!-- /tab-pane -->
+
+
+                </div> <!-- /tab-content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick View Modals -->
+    <th:block th:each="product : ${products}">
+        <div class="modal fade" th:id="'product_quickview_' + ${product.id}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content p-4">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="feature-image bg-light">
+                                <img th:src="@{${product.imagePath}}" alt="Product Image" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="single-product-info">
+                                <a href="#" class="category-btn text-uppercase fs-sm secondary-text-color d-inline-block mb-3" th:text="${product.category}"></a>
+                                <h3 class="mb-4" th:text="${product.productName}"></h3>
+
+                                <div class="item-review d-flex align-items-center gap-3">
+                                    <ul class="rating-star d-flex align-items-center gap-1 fs-sm">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                    <span class="primary-text-color fw-light">(0 Customer reviews)</span>
+                                </div>
+
+                                <div class="pricing mt-4">
+                                <span class="primary-text-color"
+                                      th:text="'₹' + ${#strings.replace(product.pricesJson, '[', '').replace(']', '').split(',')[0]}">
+                                    ₹0.00
+                                </span>
+                                </div>
+
+                                <div class="short-description mt-40">
+                                    <p class="mb-0 fw-light" th:text="${product.productDescription}"></p>
+                                </div>
+
+                                <ul class="single-product-features mt-40">
+                                    <li><span class="me-2"><i class="fas fa-truck"></i></span>Free shipping</li>
+                                    <li><span class="me-2"><i class="fas fa-undo-alt"></i></span>Free returns</li>
+                                </ul>
+
+                                <div class="d-flex align-items-center mt-40 gap-3 flex-wrap">
+                                    <div class="quantity-box">
+                                        <button type="button" class="drecrement"><i class="fa-solid fa-minus"></i></button>
+                                        <input type="text" value="1">
+                                        <button type="button" class="drecrement"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+
+                                    <button type="button"
+                                            onclick="addToCart(this)"
+                                            class="add_to_cart_btn"
+                                            th:data-name="${product.productName}"
+                                            th:data-imageurl="${product.imagePath}"
+                                            th:data-price="${#strings.replace(product.pricesJson, '[', '').replace(']', '').split(',')[0]}"
+                                            th:data-id="${product.id}">
+                                        Add to Cart
+                                        <span class="ms-2"><i class="fa-solid fa-basket-shopping"></i></span>
+                                    </button>
+
+                                    <button type="button" class="wish_btn">
+                                        <span class="me-2"><i class="fa-regular fa-heart"></i></span>
+                                        Add to Wishlist
+                                    </button>
+                                </div>
+
+                                <ul class="product-meta mt-32">
+                                    <li>SKU: <span th:text="${product.sku}"></span></li>
+                                    <li>Weights: <span th:text="${product.weightsJson}"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </th:block>
+</section>
+
+
+
+
+
+<!--deal section end-->
+
+    <!--latest arrival start-->
+<section class="ur-latest-arrival ptb-120 bg-white">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-6">
+                <div class="text-center">
+                    <h2 class="h1 mb-50">Browse Latest Arrivals</h2>
+                </div>
+            </div>
+        </div>
+
+        <!-- Latest 6 Products Only -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-xl-4 col-lg-4 col-sm-6"
+                 th:each="product, iterStat : ${products}"
+                 th:if="${iterStat.index < 6}">
+                <div class="ur-product-card position-relative card-sm-small">
+                    <span class="position-absolute ur-badge coupon-badge"
+                          th:if="${product.firstPrice != null and product.firstPrice > 0}">50%</span>
+
+                    <div class="feature-image d-flex align-items-center justify-content-center light-bg position-relative" style="height: 250px; overflow: hidden;">
+                        <a th:href="@{/product-details/{id}(id=${product.id})}">
+                            <img th:src="@{${product.imagePath}}" alt="product" class="img-fluid" style="height: 100%; object-fit: cover;" />
+                        </a>
+                        <div class="product-overlay position-absolute">
+                            <div class="product-btns d-flex align-items-center justify-content-between"  style="width: 200px;">
+                                <a href="javascript:void(0)"><i class="fa-regular fa-heart"></i></a>
+                                <a href="javascript:void(0)"><i class="fa-solid fa-basket-shopping"></i></a>
+                                <a href="#" th:attr="data-bs-toggle='modal', data-bs-target='#product_quickview__' + ${product.id}">
+                                    <i class="fa-regular fa-eye"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-4">
+                        <a href="shop-list.html" class="secondary-text-color text-uppercase" th:text="${product.category}">Category</a>
+                        <a th:href="@{/product-details/{id}(id=${product.id})}">
+                            <h5 class="my-2 fw-medium product-title" th:text="${product.productName}">Product Name</h5>
+                        </a>
+<!--                        <span class="primary-text-color fs-sm fw-medium"-->
+<!--                              th:text="'₹' + (${product.firstPrice} != null ? product.firstPrice : '0.00')">₹0.00</span>-->
+<!--                        <del class="ms-3 fw-light text-color"-->
+<!--                             th:if="${product.firstPrice != null}"-->
+<!--                             th:text="'₹' + (${product.firstPrice.add(1000)})">₹0.00</del>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-60">
+            <a href="/shop" class="template-btn primary-btn"><span>View All</span></a>
+        </div>
+    </div>
+
+    <!-- Quick View Modals for Each Product -->
+    <th:block th:each="product : ${products}">
+        <div class="modal fade" th:id="'product_quickview__' + ${product.id}" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+                <div class="modal-content p-4">
+                    <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <div class="feature-image bg-light">
+                                <img th:src="@{${product.imagePath}}" alt="Product Image" class="img-fluid">
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="single-product-info">
+                                <a href="#" class="category-btn text-uppercase fs-sm secondary-text-color d-inline-block mb-3" th:text="${product.category}"></a>
+                                <h3 class="mb-4" th:text="${product.productName}"></h3>
+
+                                <div class="item-review d-flex align-items-center gap-3">
+                                    <ul class="rating-star d-flex align-items-center gap-1 fs-sm">
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                        <li><i class="fas fa-star"></i></li>
+                                    </ul>
+                                    <span class="primary-text-color fw-light">(0 Customer reviews)</span>
+                                </div>
+
+                                <div class="pricing mt-4">
+                                    <span class="primary-text-color"
+                                          th:text="${product.firstPrice != null} ? '₹' + ${product.firstPrice} : '₹0.00'">₹0.00</span>
+                                </div>
+
+                                <div class="short-description mt-40">
+                                    <p class="mb-0 fw-light" th:text="${product.productDescription}"></p>
+                                </div>
+
+                                <ul class="single-product-features mt-40">
+                                    <li><span class="me-2"><i class="fas fa-truck"></i></span>Free shipping</li>
+                                    <li><span class="me-2"><i class="fas fa-undo-alt"></i></span>Free returns</li>
+                                </ul>
+
+                                <div class="d-flex align-items-center mt-40 gap-3 flex-wrap">
+                                    <div class="quantity-box">
+                                        <button type="button" class="drecrement"><i class="fa-solid fa-minus"></i></button>
+                                        <input type="text" value="1">
+                                        <button type="button" class="drecrement"><i class="fa-solid fa-plus"></i></button>
+                                    </div>
+
+                                    <button type="button"
+                                            onclick="addToCart(this)"
+                                            class="add_to_cart_btn"
+                                            th:data-name="${product.productName}"
+                                            th:data-imageurl="${product.imagePath}"
+                                            th:data-price="${#strings.replace(product.pricesJson, '[', '').replace(']', '').split(',')[0]}"
+                                            th:data-id="${product.id}">
+                                        Add to Cart
+                                        <span class="ms-2"><i class="fa-solid fa-basket-shopping"></i></span>
+                                    </button>
+
+                                    <button type="button" class="wish_btn">
+                                        <span class="me-2"><i class="fa-regular fa-heart"></i></span>
+                                        Add to Wishlist
+                                    </button>
+                                </div>
+
+                                <ul class="product-meta mt-32">
+                                    <li>SKU: <span th:text="${product.sku}"></span></li>
+                                    <li>Weights: <span th:text="${product.weightsJson}"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </th:block>
+</section>
+
+<!--latest arrival end-->
+
+    <!--feedback section start-->
+<section class="ptb-120 feedback-section overflow-hidden position-relative z-1" data-background="images/banner/bg-overlay.jpg">
+    <img src="images/shapes/neaklace-2.png" alt="neaklace" class="position-absolute start-0 top-0 z--1 neaklace-shape">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-xl-6 col-lg-6 order-2 order-lg-1">
+                <div class="section-content">
+                    <span class="fw-light fs-sm text-white">YOUR WORDS</span>
+                    <h2 class="h1 mt-4 mb-5 text-white">Our Customer Testimonial</h2>
+                    <div class="ur-feedback-slider slider-spacing">
+                        <div th:each="testimonial : ${testimonials}" class="ur-feedback-single">
+                            <p class="fw-light mb-4" th:text="'“' + testimonial.feedback + '”'"></p>
+                            <h3 class="text-white mb-0" th:text="${testimonial.name}"></h3>
+                            <span class="fs-sm fw-light text-white" th:text="${testimonial.occupation}"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-xl-6 col-lg-6 order-1 order-lg-2">
+                <div class="feedback-clients-thumbail-slider slider-spacing">
+                    <div th:each="testimonial : ${testimonials}" class="single-item">
+                        <img th:src=" ${testimonial.imgPath}" alt="Client image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--feedback section end-->
+
+    <!--instagram section start-->
+    <section class="instagram-section pt-120 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 text-center">
+                    <h2 class="h1 fw-normal">Instagram Memory</h2>
+                </div>
+            </div>
+
+            <div class="instagram-slider mt-5" th:if="${memories}">
+                <div class="instagram-slide-single position-relative"
+                     th:each="memory : ${memories}">
+
+                    <!-- DEBUG: Show path as text -->
+<!--                    <p>-->
+<!--                        Raw path: <span th:text="${memory.imagePath}"></span><br />-->
+<!--                        Resolved URL: <span th:text="@{${memory.imagePath}}"></span>-->
+<!--                    </p>-->
+
+                    <!-- Actual image -->
+                    <img th:src="@{${memory.imagePath}}"
+                         th:alt="${memory.description}"
+                         class="img-fluid"
+                         onerror="this.src='/images/default.jpg';" />
+
+                    <!-- Fancybox overlay -->
+                    <a th:href="@{${memory.imagePath}}"
+                       class="item-overlay"
+                       data-fancybox="gallery"
+                       th:title="${memory.description}">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--instagram section end-->
+
+    <!--brand slider start-->
+    <div class="brand-section ptb-120 bg-white">
+        <div class="container">
+            <div class="ur-brand-slider slider-spacing">
+                <div class="ur-brand-single text-center">
+                    <a href="#">
+                        <img src="images/brands/brand-1.png" alt="brand" class="img-fluid">
+                    </a>
+                </div>
+                <div class="ur-brand-single text-center">
+                    <a href="#">
+                        <img src="images/brands/brand-2.png" alt="brand" class="img-fluid">
+                    </a>
+                </div>
+                <div class="ur-brand-single text-center">
+                    <a href="#">
+                        <img src="images/brands/brand-3.png" alt="brand" class="img-fluid">
+                    </a>
+                </div>
+                <div class="ur-brand-single text-center">
+                    <a href="#">
+                        <img src="images/brands/brand-4.png" alt="brand" class="img-fluid">
+                    </a>
+                </div>
+                <div class="ur-brand-single text-center">
+                    <a href="#">
+                        <img src="images/brands/brand-5.png" alt="brand" class="img-fluid">
+                    </a>
+                </div>
+                <div class="ur-brand-single text-center">
+                    <a href="#">
+                        <img src="images/brands/brand-5.png" alt="brand" class="img-fluid">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--brand slider end-->
+
+    <!--devider-->
+    <span class="theme-devider"></span>
+
+    <!--blog section start-->
+    <section class="ptb-120 bg-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="text-center">
+                        <h2 class="h1 fw-normal mb-4">From Our Blog</h2>
+                        <p class="mb-60 fw-light">Our fashion jewellery is inspired by minimalism, focused on minimal simplicity, perfect for everyday wear and cherished for years.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <!-- Thymeleaf iteration for dynamic blog data -->
+                <div th:each="blog : ${blogs}" class="col-xl-4 col-md-6">
+                    <article class="ur-blog-card position-relative">
+                        <!-- Display the blog date -->
+                        <span th:text="${#temporals.format(blog.date, 'dd MMM, yyyy')}"></span>
+
+                        <!-- Blog Feature Image -->
+                        <div class="feature-image overflow-hidden">
+                            <a th:href="@{'/blog/' + ${blog.id}}">
+                                <img th:src="@{${blog.imagePath}}" alt="feature image" class="img-fluid">
+                            </a>
+                        </div>
+
+                        <!-- Blog Content -->
+                        <div class="card-content mt-32">
+                <span class="fs-sm fw-light">
+                    <h4 class="fw-normal my-3" th:text="${blog.heading}"></h4>
+                </span>
+
+                            <p class="mb-4 fw-light" th:text="${blog.question}"></p>
+
+                            <!-- Read More Button -->
+                            <a href="javascript:void(0);" class="explore-btn"
+                               onclick="toggleContent(this, 'blog-content-[[${blog.id}]]')">Read More</a>
+
+                            <!-- Hidden Full Content -->
+                            <div id="blog-content-[[${blog.id}]]" class="full-content">
+                                <p th:text="${blog.answer}"></p>
+                            </div>
+
+
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--blog section end-->
+
+    <!--newsletter section start-->
+
+    <!--newsletter section end-->
+
+    <!--footer section start-->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+    <!--footer section end-->
+
+
+    <!--scroll top button start-->
+    <button type="button" class="scroll-top-btn"><i class="fa-solid fa-hand-pointer"></i></button>
+    <!--scroll top button end-->
+
+
+    <!--product modal start-->
+    <div class="modal fade" id="product_quickview">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="feature-image bg-light">
+                            <img src="images/products/product-lg-1.png" alt="not found" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="single-product-info">
+                            <a href="shop-list.html" class="category-btn text-uppercase fs-sm secondary-text-color d-inline-block mb-3">Neaklace</a>
+                            <h3 class="mb-4">Tony Gold Neaklace</h3>
+                            <div class="item-reivew d-flex align-items-center gap-3">
+                                <ul class="rating-star d-flex align-items-center gap-1 fs-sm">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span class="primary-text-color fw-light">(1 Customer review)</span>
+                            </div>
+                            <div class="pricing mt-4">
+                                <span class="primary-text-color">$260.00</span>
+                                <span class="pricing-devider primary-text-color">-</span>
+                                <span class="primary-text-color">$360.00</span>
+                            </div>
+                            <div class="short-description mt-40">
+                                <p class="mb-0 fw-light">Eget taciti odio cum habitant egestas conubia turpis phasellus, ante parturient
+                                    donec duis primis nam faucibus augue malesuada venenatis</p>
+                            </div>
+                            <ul class="single-product-features mt-40">
+                                <li>
+                                    <span class="me-2">
+                                        <svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M0.5 6H14.2812L11.125 9.15625C10.9375 9.34375 10.9375 9.6875 11.125 9.875C11.3125 10.0625 11.6562 10.0625 11.8438 9.875L15.8438 5.875C15.9375 5.78125 16 5.65625 16 5.5C16 5.375 15.9375 5.25 15.8438 5.15625L11.8438 1.15625C11.6562 0.96875 11.3125 0.96875 11.125 1.15625C10.9375 1.34375 10.9375 1.6875 11.125 1.875L14.2812 5H0.5C0.21875 5 0 5.25 0 5.5C0 5.78125 0.21875 6 0.5 6ZM15.5 12H1.6875L4.84375 8.875C5.03125 8.6875 5.03125 8.34375 4.84375 8.15625C4.65625 7.96875 4.3125 7.96875 4.125 8.15625L0.125 12.1562C0.03125 12.25 0 12.375 0 12.5C0 12.6562 0.03125 12.7812 0.125 12.875L4.125 16.875C4.3125 17.0625 4.65625 17.0625 4.84375 16.875C5.03125 16.6875 5.03125 16.3438 4.84375 16.1562L1.6875 13H15.5C15.75 13 16 12.7812 16 12.5C16 12.25 15.75 12 15.5 12Z" fill="#121111"/>
+                                        </svg>    
+                                    </span>
+                                    Free returns
+                                </li>
+                                <li>
+                                    <span class="me-2">
+                                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 13C0.875 13 0 12.125 0 11V2C0 0.90625 0.875 0 2 0H11C12.0938 0 13 0.90625 13 2V3H15.0312C15.4688 3 15.875 3.21875 16.1562 3.53125L18.625 6.40625C18.8438 6.6875 19 7.03125 19 7.375V12H19.5C19.75 12 20 12.25 20 12.5C20 12.7812 19.75 13 19.5 13H18C18 14.6562 16.6562 16 15 16C13.3125 16 12 14.6562 12 13H7.96875C7.96875 14.6562 6.65625 16 4.96875 16C3.3125 16 1.96875 14.6562 1.96875 13H2ZM1 2V11C1 11.5625 1.4375 12 2 12H2.15625C2.5625 10.8438 3.6875 10 5 10C6.28125 10 7.40625 10.8438 7.8125 12H12V2C12 1.46875 11.5312 1 11 1H2C1.4375 1 1 1.46875 1 2ZM17.8125 7L15.4062 4.1875C15.3125 4.0625 15.1562 4 15.0312 4H13V7H17.8125ZM13 8V10.7812C13.5 10.3125 14.2188 10 15 10C16.2812 10 17.4062 10.8438 17.8125 12H18V8H13ZM5 11C3.875 11 3 11.9062 3 13C3 14.125 3.875 15 5 15C6.09375 15 7 14.125 7 13C7 11.9062 6.09375 11 5 11ZM15 15C16.0938 15 17 14.125 17 13C17 11.9062 16.0938 11 15 11C13.875 11 13 11.9062 13 13C13 14.125 13.875 15 15 15Z" fill="#121111"/>
+                                        </svg>
+                                    </span>
+                                    Free shipping via DHL, fully insured
+                                </li>
+                                <li>
+                                    <span class="me-2">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M7.34375 10.375C7.15625 10.5625 6.8125 10.5625 6.625 10.375L4.625 8.375C4.4375 8.1875 4.4375 7.84375 4.625 7.65625C4.8125 7.46875 5.15625 7.46875 5.34375 7.65625L7 9.3125L10.625 5.65625C10.8125 5.46875 11.1562 5.46875 11.3438 5.65625C11.5312 5.84375 11.5312 6.1875 11.3438 6.375L7.34375 10.375ZM16 8C16 12.4375 12.4062 16 8 16C3.5625 16 0 12.4375 0 8C0 3.59375 3.5625 0 8 0C12.4062 0 16 3.59375 16 8ZM8 1C4.125 1 1 4.15625 1 8C1 11.875 4.125 15 8 15C11.8438 15 15 11.875 15 8C15 4.15625 11.8438 1 8 1Z" fill="#121111"/>
+                                        </svg>    
+                                    </span>
+                                    All taxes and customer duties included
+                                </li>
+                            </ul>
+                            <div class="d-flex align-items-center mt-40 gap-3 flex-wrap">
+                                <div class="quantity-box">
+                                    <button type="button" class="drecrement"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" value="1">
+                                    <button type="button" class="drecrement"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+                                <button type="button" class="add_to_cart_btn">Add to Cart<span class="ms-2"><i class="fa-solid fa-basket-shopping"></i></span></button>
+                                <button type="button" class="wish_btn">
+                                    <span class="me-2">
+                                        <i class="fa-regular fa-heart"></i>   
+                                    </span>
+                                    Add to Wishlist
+                                </button>
+                            </div>
+                            <ul class="product-meta mt-32">
+                                <li>SKU:17</li>
+                                <li>Categories: Light Bulb, Table</li>
+                                <li>Tags: Iluminate, Textured</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--product modal end-->
+
+    <!--Esential Js Files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/nice-select.js"></script>
+    <script src="js/fancybox.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+
+<!--    blog readmore button-->
+    <script>
+        function toggleContent(button, contentId) {
+            const content = document.getElementById(contentId);
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                button.textContent = 'Read More';
+            } else {
+                content.classList.add('open');
+                button.textContent = 'Read Less';
+            }
+        }
+    </script>
+
+    <script>
+        <script>
+    function addToCart(button) {
+    const productId = button.getAttribute("data-id");
+    const price = parseFloat(button.getAttribute("data-price"));
+
+    const formData = new URLSearchParams();
+    formData.append("productId", productId);
+    formData.append("price", price);
+
+    fetch("/add-to-cart", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === "success") {
+            alert("Item added to cart!");
+        } else if (data === "not_logged_in") {
+            alert("Please log in to add items to your cart.");
+            window.location.href = "/userLogin";
+        } else {
+            alert("Something went wrong.");
+        }
+    });
+}
+    </script>
+</body>
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 09:44:52 GMT -->
+</html>

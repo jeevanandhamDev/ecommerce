@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JB</title>
+
+  <!--Essential css files-->
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/fancybox.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!--favicon-->
+  <link rel="icon" href="images/favicon.png">
+
+  <style>
+    .full-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.7s ease;
+    }
+    .full-content.open {
+      max-height: 500px; /* Adjust height as needed */
+    }
+  </style>
+</head>
+<body>
+<!-- preloader start -->
+<div class="preloader">
+  <h1 class="display-1">JB Glam</h1>
+  <div class="preload-progress">
+    <span></span>
+  </div>
+</div>
+<!-- preloader end -->
+
+<header th:replace="fragments/header :: header"></header>
+
+<!-- Account View Section -->
+<div class="container mt-5">
+  <h2 class="mb-4">My Account</h2>
+
+  <!-- View Mode -->
+  <div id="view-mode">
+    <table class="table table-bordered">
+      <tr><th>Name</th><td th:text="${user.name}">John Doe</td></tr>
+      <tr><th>Email</th><td th:text="${user.email}">john@example.com</td></tr>
+      <tr><th>Phone</th><td th:text="${user.phoneNumber}">1234567890</td></tr>
+      <tr><th>Address</th><td th:text="${user.address}">123 Main St</td></tr>
+      <tr><th>Joined On</th><td th:text="${#temporals.format(user.createdDate, 'dd MMM yyyy')}">Date</td></tr>
+    </table>
+    <button class="btn btn-primary mb-4" onclick="showEditForm()">Edit Account</button>
+    <a href="/cart" class="btn btn-primary mb-4">My Cart</a>
+  </div>
+
+  <!-- Edit Mode -->
+  <div id="edit-form"  style="display:none;">
+    <form th:action="@{/account/update}" class="mb-4" method="post">
+      <input type="hidden" name="id" th:value="${user.id}" />
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" name="name" th:value="${user.name}" required />
+      </div>
+
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" th:value="${user.email}" readonly />
+        <a class="btn btn-warning btn-sm mt-2" href="/account/change-email">Change Email</a>
+      </div>
+
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="text" class="form-control" name="phoneNumber" th:value="${user.phoneNumber}" required />
+      </div>
+
+      <div class="form-group">
+        <label>Address</label>
+        <textarea class="form-control" name="address" required th:text="${user.address}"></textarea>
+      </div>
+
+      <div class="form-group mb-2">
+        <label>Joined On</label>
+        <input type="text" class="form-control" th:value="${#temporals.format(user.createdDate, 'dd MMM yyyy')}" readonly />
+      </div>
+
+      <button type="submit" class="btn btn-success">Save Changes</button>
+      <button type="button" class="btn btn-secondary ml-2" onclick="cancelEdit()">Cancel</button>
+    </form>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<!-- JavaScript -->
+<script>
+  function showEditForm() {
+    document.getElementById("view-mode").style.display = "none";
+    document.getElementById("edit-form").style.display = "block";
+  }
+
+  function cancelEdit() {
+    document.getElementById("edit-form").style.display = "none";
+    document.getElementById("view-mode").style.display = "block";
+  }
+</script>
+
+<footer th:replace="fragments/footer :: footer"></footer>
+
+<!-- Essential JS Files -->
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.js"></script>
+<script src="js/jquery-ui.js"></script>
+<script src="js/nice-select.js"></script>
+<script src="js/fancybox.js"></script>
+<script src="js/countdown.min.js"></script>
+<script src="js/wow.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

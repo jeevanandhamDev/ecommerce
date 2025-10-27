@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 09:45:18 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uroan - Blog-single</title>
+
+    <!--Essential css files-->
+    <link rel="stylesheet" href="assets/css/all.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" href="assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="assets/css/nice-select.css">
+    <link rel="stylesheet" href="assets/css/fancybox.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+
+    <!--favicon-->
+    <link rel="icon" href="assets/images/favicon.png">
+
+</head>
+<body>
+
+    <!--preloader start-->
+    <div class="preloader">
+        <h1 class="display-1">UROAN</h1>
+        <div class="preload-progress">
+            <span></span>
+        </div>
+    </div>
+    <!--preloader end-->
+
+    <!--header section start-->
+    <header class="ur_header_section primary-bg-color header-sticky">
+        <div class="topbar py-2 bottom-border d-none d-lg-block">
+            <div class="container-large">
+                <div class="row align-items-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="topbar-info d-flex align-items-center gap-48 flex-wrap">
+                            <span class="text-white item-single"><a href="tel:38122252525" class="text-white">+381 2225 25 25</a> (9AM - 6PM EST)</span>
+                            <span class="text-white item-single">FREE SHIPPING ON ALL U.S. ORDERS</span>
+                            <span class="text-white item-single">GIFT CARDS</span>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-4">
+                        <div class="d-flex align-items-center justify-content-end gap-48 topbar-info flex-wrap">
+                            <div class="ur-header-select item-single">
+                                <select>
+                                    <option>EN</option>
+                                    <option>BN</option>
+                                    <option>CN</option>
+                                </select>
+                            </div>
+                            <div class="ur-header-select item-single">
+                                <select>
+                                    <option>USD</option>
+                                    <option>BDT</option>
+                                    <option>CNY</option>
+                                    <option>INR</option>
+                                </select>
+                            </div>
+                            <a href="shop.html" class="item-single text-uppercase">store</a>
+                            <a href="#" class="item-single text-uppercase">Subscribe</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-wrapper">
+            <div class="container-large">
+                <div class="row align-items-center">
+                    <div class="col-xl-2 col-6">
+                        <a href="index.html" class="logo-white"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></a>
+                    </div>
+                    <div class="col-xxl-7 col-xl-8 d-none d-xl-block">
+                        <nav class="ur-navmenu">
+                            <ul>
+                                <li class="has-submenu">
+                                    <a href="javascript:void(0)">Home</a>
+                                    <ul class="submenu-wrapper">
+                                        <li><a href="index.html">Home Page 1</a></li>
+                                        <li><a href="index-2.html">Home Page 2</a></li>
+                                        <li><a href="index-3.html">Home Page 3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="about.html">About</a></li>
+                                <li class="has-submenu"><a href="javascript:void(0)">Pages</a>
+
+                                    <div class="ur-megamenu">
+                                        <div class="megamenu-row">
+                                            <div class="megamenu-column border-r">
+                                                <h6 class="column-title">Product Pages</h6>
+                                                <ul class="pages-list">
+                                                    <li><a href="shop.html">Shop Page</a></li>
+                                                    <li><a href="shop-list.html">Shop List</a></li>
+                                                    <li><a href="product-details.html">Product Details</a></li>
+                                                    <li><a href="#">Shop Layout 04</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="megamenu-column border-r">
+                                                <h6 class="column-title">Filter Layout</h6>
+                                                <ul class="pages-list">
+                                                    <li><a href="shop-list.html">Filter Sidebar</a></li>
+                                                    <li><a href="#">Filter On Top</a></li>
+                                                    <li><a href="shop.html">Filter Side Out</a></li>
+                                                    <li><a href="product-details.html">Modal Filter</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="megamenu-column border-r">
+                                                <h6 class="column-title">Product Type</h6>
+                                                <ul class="pages-list">
+                                                    <li><a href="shop-list.html">Filter Sidebar</a></li>
+                                                    <li><a href="#">Filter On Top</a></li>
+                                                    <li><a href="shop.html">Filter Side Out</a></li>
+                                                    <li><a href="product-details.html">Modal Filter</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="megamenu-column">
+                                                <h6 class="column-title">Shop Pages</h6>
+                                                <ul class="pages-list">
+                                                    <li><a href="login.html">My Account</a></li>
+                                                    <li><a href="cart.html">Cart</a></li>
+                                                    <li><a href="checkout.html">Checkout</a></li>
+                                                    <li><a href="wishlist.html">Wishlist</a></li>
+                                                    <li><a href="order-tracking.html">Order Tracking</a></li>
+                                                </ul>
+                                            </div>
+                                            <div class="megamenu-column banner">
+                                                <div class="megamenu-banner">
+                                                    <a href="product-details.html" class="p-0"><img src="assets/images/banner/banner-1.jpg" alt="not found" class="img-fluid"></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="has-submenu"><a href="javascript:void(0)">Blog</a>
+                                    <ul class="submenu-wrapper">
+                                        <li><a href="blog.html">Blog List</a></li>
+                                        <li><a href="blog-single.html">Blog Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-submenu"><a href="javascript:void(0)">Shop</a>
+                                    <ul class="submenu-wrapper">
+                                        <li><a href="shop.html">Shop Grid</a></li>
+                                        <li><a href="shop-list.html">Shop List</a></li>
+                                        <li><a href="product-details.html">Product Details</a></li>
+                                        <li><a href="product-details-2.html">Product Details V2</a></li>
+                                        <li><a href="product-details-3.html">Product Details V3</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="wishlist.html">Wishlist</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="col-xxl-3 col-xl-2 col-6">
+                        <div class="ur-header-right d-flex align-items-center justify-content-end">
+                            <div class="ur-user-links position-relative">
+                                <button type="button" class="user-btn">
+                                    <i class="fa-regular fa-user"></i>
+                                </button>
+                                <ul class="position-absolute user-menu">
+                                    <li><a href="login.html">Login</a></li>
+                                    <li><a href="signup.html">Sign Up</a></li>
+                                    <li><a href="login.html">My Account</a></li>
+                                </ul>
+                            </div>
+                            <div class="user-cart d-none d-sm-block">
+                                <button type="button" class="cart-btn" data-bs-toggle="dropdown">
+                                    <span class="me-2">
+                                        <i class="fa-solid fa-basket-shopping"></i>
+                                    </span>
+                                    <span class="btn-text">Cart ($0.00)</span>
+                                </button>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="cart.html" class="header-link"><i class="fa-solid fa-basket-shopping"></i></a>
+                            </div>
+                            <div class="header-search d-none d-sm-block">
+                                <div class="dropdown">
+                                    <button class="search-btn" data-bs-toggle="dropdown"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <form class="search-form d-flex align-items-center gap-2">
+                                            <input type="text" placeholder="Search..." class="theme-input bg-transparent">
+                                            <button type="submit" class="submit-btn">Go</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-sm-none">
+                                <a href="javascript:void(0)" class="header-link header-search-open"><i class="fa-solid fa-magnifying-glass"></i></a>
+                            </div>
+                            <div class="header-toggle">
+                                <button type="button" class="ur3-header-toggle offcanvus-toggle d-none d-xl-inline-block">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <button type="button" class="ur3-header-toggle mobile-menu-toggle d-xl-none">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--header section end-->
+
+    <!--offcanvus start-->
+    <div class="offcanvus-box position-fixed bg-white">
+        <a href="javascript:void(0)" class="offcanvus-close"><i class="fa-solid fa-xmark"></i></a>
+        <div class="content-top mb-100">
+            <a href="index.html" class="offcanvus-logo"><img src="assets/images/logo-black.png" alt="logo"></a>
+            <p class="mb-0 mt-32 fw-light">Distrak Street 2SK Line, Germanygalore@inside-support.com (+125) 2156-2145</p>
+        </div>
+        <div class="offcanvus-gallery d-flex align-items-center flex-wrap">
+            <a href="#"><img src="assets/images/gallery/1.jpg" alt="not found"></a>
+            <a href="#"><img src="assets/images/gallery/2.jpg" alt="not found"></a>
+            <a href="#"><img src="assets/images/gallery/3.jpg" alt="not found"></a>
+            <a href="#"><img src="assets/images/gallery/4.jpg" alt="not found"></a>
+            <a href="#"><img src="assets/images/gallery/5.jpg" alt="not found"></a>
+            <a href="#"><img src="assets/images/gallery/6.jpg" alt="not found"></a>
+        </div>
+        <div class="offcanvus-newsletter">
+            <h4 class="mb-4 text-center">Newsletter</h4>
+            <form action="#">
+                <input type="email" placeholder="Enter your e-mail" class="theme-input">
+                <button type="submit" class="template-btn primary-btn mt-3 w-100"><span>SUBSCRIBE NOW</span></button>
+            </form>
+        </div>
+        <div class="offcanvus-bottom d-flex align-items-center justify-content-between">
+            <div class="language-switcher">
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown"><img src="assets/images/icons/flag-usa.png" alt="flag">English <span><i class="fas fa-angle-down"></i></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><img src="assets/images/icons/flag-bd.jpg" alt="flag">Bangla</a></li>
+                        <li><a href="#"><img src="assets/images/icons/flag-india.jpg" alt="flag">Hindi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="currency-switcher">
+                <select>
+                    <option>USD</option>
+                    <option>BDT</option>
+                    <option>CNY</option>
+                </select>
+            </div>
+            <div class="user-links">
+                <a href="login.html"><span class="me-2"><i class="fa-regular fa-user"></i></span>Account</a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvus end-->
+
+    <!--mobile menu start-->
+    <div class="mobile-menu">
+        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+        <a href="#" class="logo"><img src="assets/images/logo-black.jpg" alt="logo" class="img-fluid"></a>
+        <ul class="mobile-nav-menu">
+            <li class="has-submenu">
+                <a href="javascript:void(0)">Home</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="index.html">Home Page 1</a></li>
+                    <li><a href="index-2.html">Home Page 2</a></li>
+                    <li><a href="index-3.html">Home Page 3</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li class="has-submenu"><a href="javascript:void(0)">Pages</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="order-tracking.html">Order Tracking</a></li>
+                </ul>
+                
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Blog</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="blog.html">Blog List</a></li>
+                    <li><a href="blog-single.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Shop</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="shop.html">Shop Grid</a></li>
+                    <li><a href="shop-list.html">Shop List</a></li>
+                    <li><a href="product-details.html">Product Details</a></li>
+                    <li><a href="product-details-2.html">Product Details V2</a></li>
+                    <li><a href="product-details-3.html">Product Details V3</a></li>
+                </ul>
+            </li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <form class="mobile-search d-flex align-items-center mt-5" action="#">
+            <input type="text" placeholder="Search..." class="theme-input">
+            <button type="submit" class="template-btn primary-btn"><span>Go</span></button>
+        </form>
+    </div>
+    <!--mobile menu end-->
+
+    <!--search form start-->
+    <div class="ur-search-form">
+        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+        <form action="#" class="d-flex align-items-center">
+            <input type="text" placeholder="Search...." class="theme-input">
+            <button type="submit" class="submit-btn">Go</button>
+        </form>
+    </div>
+    <!--search form end-->
+
+    <!--cart drawer start-->
+    <div class="cart-drawer position-fixed">
+        <div class="drawer-close d-flex align-items-center justify-content-between position-absolute start-0 top-0 w-100 px-4 py-4 border-bottom">
+            <h6 class="mb-0">Shopping Cart</h6>
+            <a href="javascript:void(0)" class="drawer-close"><i class="fas fa-xmark"></i></a>
+        </div>
+        <ul class="cart-list">
+            <li class="d-flex align-items-center gap-3">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="assets/images/products/product-1.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Weeding Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="assets/images/products/product-2.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Diamond Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="assets/images/products/product-3.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Bracelets Gold</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="drawer-bottom border-top">
+            <div class="d-flex align-items-center justify-content-between mt-4">
+                <h6 class="mb-0">Total:</h6>
+                <span class="fw-medium secondary-text-color">$750.00</span>
+            </div>
+            <a href="cart.html" class="template-btn primary-btn text-uppercase fw-medium w-100 text-center mt-4"><span>View Cart & Check Out</span></a>
+        </div>
+    </div>
+    <!--cart drawer end-->
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="assets/images/shapes/breadcrumb-bg.jpg">
+        <div class="container">
+            <p class="breadcrumb-text fw-light mb-0"><a href="index.html">Home</a> / <span>Blog / </span> <span class="primary-text-color">Praesent sapien massa convallis a pellentesque</span></p>
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+    <!--blog single start-->
+    <section class="blog-single-section ptb-120 bg-white">
+        <div class="container">
+            <div class="row g-5 g-xl-4">
+                <div class="col-xl-8">
+                    <div class="blog-single-content">
+                        <img src="assets/images/blog/blog-lg-1.jpg" alt="not found" class="img-fluid mb-5">
+                        <p class="fs-sm fw-light text-color mb-3">September 25, 2022 - By David Smith - In Jewelry</p>
+                        <h3 class="mb-40 fw-normal">Praesent sapien massa convallis a pellentesque</h3>
+                        <p class="fw-light text-color">Donec rutrum congue leo eget malesuada. Curabitur aliquet quam posuere blandit. Vivamus suscipit tortor eget felis porttitor volutpa estibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.</p>
+                        <p class="mb-60 fw-light text-color">Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Pellentesque in ipsum id orci porta dapibus Vestibulum ante ipsum primis in faucibus orci luctus  ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam ullamcorper sit amet ligula. Quisque velit , pretium ut lacinia in, elementum id enim.</p>
+                        <blockquote class="mb-60">
+                            <h4 class="mb-0">“Cras ultricies ligula sed magna dictum porta aesent sapien massa convallis a pellentesque nec, egestas vamus magna justo”</h4>
+                        </blockquote>
+                        <p class="mb-60 fw-light text-color">Aptent vestibulum sodales porttitor hac torquent commodo magnis cum molestie donec, egestas ultrices ultricies eget sapien tortor odio condimentum dictum eu, lacus phasellus velit elementum maecenas fringilla placerat suscipit libero. Suscipit fermentum rutrum nisl lacinia varius duis euismod a praesent feugiat inceptos leo, senectus ac facilisis placerat mi posuere lobortis aliquam litora eget dictumst semper, vestibulum morbi aenean volutpat accumsan mollis vivamus aliquet sollicitudin condimentum conubia.</p>
+                        <div class="blog-gallery d-flex align-items-center gap-4 flex-wrap flex-sm-nowrap mb-40">
+                            <div>
+                                <img src="assets/images/blog/blog-4.jpg" alt="not found" class="img-fluid">
+                            </div>
+                            <div>
+                                <img src="assets/images/blog/blog-5.jpg" alt="not found" class="img-fluid">
+                            </div>
+                        </div>
+                        <p class="mb-60 fw-light text-color">Vestibulum ante ipsum primis in faucibus orci luctus  ultrices posuere cubilia Curae; Donec velit neque, auctor sit amet aliquam ullamcorper sit amet ligula. Quisque velit , pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat. Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec rutrum congue leo eget malesuada urabitur non nulla sit amet nisl tempus</p>
+                    
+                        <div class="tags-social d-flex align-items-center justify-content-between flex-wrap gap-3">
+                            <div class="tags-list">
+                                <span class="title fw-medium me-2">Tags:</span>
+                                <a href="#">Car Dealership</a>
+                                <a href="#">Breaks Discs</a>
+                                <a href="#">Car Shop</a>
+                            </div>
+                            <div class="social-share">
+                                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="#"><i class="fab fa-behance"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="spacer mt-60 mb-60"></div>
+                        
+                        <div class="blog-author">
+                            <h3 class="mb-40">Author</h3>
+                            <div class="blog-author-box d-flex align-items-center gap-4 flex-wrap flex-md-nowrap">
+                                <div class="author-thumb">
+                                    <img src="assets/images/clients/author-1.jpg" alt="author" class="img-fluid">
+                                </div>
+                                <div>
+                                    <h4 class="mb-4 fw-normal">David Walton</h4>
+                                    <p class="mb-4 fw-light text-color">Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo orem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                                    <div class="author-socials">
+                                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#"><i class="fab fa-twitter"></i></a>
+                                        <a href="#"><i class="fab fa-dribbble"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>  
+                    
+                        <div class="spacer mt-60 mb-60"></div>
+
+                        <div class="blog-comments">
+                            <h3 class="mb-2 fw-normal">Comments</h3>
+                            <ul class="blog-comment-list">
+                                <li class="d-flex align-items-center gap-4 flex-wrap flex-md-nowrap">
+                                    <div class="client-thumb">
+                                        <img src="assets/images/clients/client-1.jpg" alt="not found" class="img-fluid">
+                                    </div>
+                                    <div class="position-relative">
+                                        <span class="fw-light fs-sm text-color">Sep 25, 2022</span>
+                                        <h4 class="mb-3 mt-1">Amalia Genner</h4>
+                                        <p class="fw-light text-color mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed convallis at tellus ivamus suscipit tortor eget felis porttitor volutpat.</p>
+                                        <button type="button" class="reply-btn">Reply</button>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-4 flex-wrap flex-md-nowrap ms-5">
+                                    <div class="client-thumb">
+                                        <img src="assets/images/clients/client-2.jpg" alt="not found" class="img-fluid">
+                                    </div>
+                                    <div class="position-relative">
+                                        <span class="fw-light fs-sm text-color">Sep 25, 2022</span>
+                                        <h4 class="mb-3 mt-1">Gennifer Genny</h4>
+                                        <p class="fw-light text-color mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed convallis at tellus ivamus suscipit tortor eget felis porttitor volutpat.</p>
+                                        <button type="button" class="reply-btn">Reply</button>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-4 flex-wrap flex-md-nowrap">
+                                    <div class="client-thumb">
+                                        <img src="assets/images/clients/client-1.jpg" alt="not found" class="img-fluid">
+                                    </div>
+                                    <div class="position-relative">
+                                        <span class="fw-light fs-sm text-color">Sep 25, 2022</span>
+                                        <h4 class="mb-3 mt-1">Jacyka jacy</h4>
+                                        <p class="fw-light text-color mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus magna justo, lacinia eget consectetur sed convallis at tellus ivamus suscipit tortor eget felis porttitor volutpat.</p>
+                                        <button type="button" class="reply-btn">Reply</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="blog-review-form mt-5">
+                            <h3 class="mb-3 fw-normal">Add a Review</h3>
+                            <p class="mb-4">Your email address will not be published. Required fields are marked*</p>
+
+                            <form class="#">
+                                <div class="row align-items-center g-4">
+                                    <div class="col-sm-6">
+                                        <div class="input-field">
+                                            <input type="text" placeholder="Your Name*" class="theme-input fw-light">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="input-field">
+                                            <input type="text" placeholder="Your Name*" class="theme-input fw-light">
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12">
+                                        <div class="input-field">
+                                            <textarea placeholder="Your Reviews*" class="theme-input fw-light" rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="template-btn primary-btn mt-4"><span>Submit Now</span></button>
+                            </form>
+
+                        </div>
+                    
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <div class="blog-sidebar">
+                        <div class="sidebar-widget search-widget">
+                            <h4 class="widget-title position-relative fw-normal mb-5">Search Here</h4>
+                            <form>
+                                <input type="text" placeholder="Search Here..." class="theme-input fw-light">
+                            </form>
+                        </div>
+                        <div class="sidebar-widget categories-widget mt-60">
+                            <h4 class="widget-title position-relative fw-normal mb-5">Categories</h4>
+                            <ul class="sidebar-check-fields">
+                                <li><label><input type="checkbox"> <span>Latest News</span></label></li>
+                                <li><label><input type="checkbox"> <span>Today Best Posts</span></label></li>
+                                <li><label><input type="checkbox"> <span>Design Trend</span></label></li>
+                                <li><label><input type="checkbox"> <span>UI/UX Trend</span></label></li>
+                                <li><label><input type="checkbox"> <span>Brand Design</span></label></li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-widget latest-post-widget mt-60">
+                            <h4 class="widget-title position-relative fw-normal mb-5">Latest Posts</h4>
+                            <ul class="latest-posts">
+                                <li class="d-flex align-items-center gap-3">
+                                    <div class="feature-image pe-1">
+                                        <a href="product-details.html"><img src="assets/images/blog/blog-1.jpg" alt="not found" class="img-fluid"></a>
+                                    </div>
+                                    <div>
+                                        <span class="fs-sm fw-light text-color date">Sep 25, 2022</span>
+                                        <a href="product-details.html"><h6 class="mb-0 mt-3 fw-regular">Deal Going Get The Offer For All Products Today</h6></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-3">
+                                    <div class="feature-image pe-1">
+                                        <a href="product-details.html"><img src="assets/images/blog/blog-2.jpg" alt="not found" class="img-fluid"></a>
+                                    </div>
+                                    <div>
+                                        <span class="fs-sm fw-light text-color date">Sep 25, 2022</span>
+                                        <a href="product-details.html"><h6 class="mb-0 mt-3 fw-regular">Deal Going Get The Offer For All Products Today</h6></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-3">
+                                    <div class="feature-image pe-1">
+                                        <a href="product-details.html"><img src="assets/images/blog/blog-3.jpg" alt="not found" class="img-fluid"></a>
+                                    </div>
+                                    <div>
+                                        <span class="fs-sm fw-light text-color date">Sep 25, 2022</span>
+                                        <a href="product-details.html"><h6 class="mb-0 mt-3 fw-regular">Deal Going Get The Offer For All Products Today</h6></a>
+                                    </div>
+                                </li>
+                                <li class="d-flex align-items-center gap-3">
+                                    <div class="feature-image pe-1">
+                                        <a href="product-details.html"><img src="assets/images/blog/blog-4.jpg" alt="not found" class="img-fluid"></a>
+                                    </div>
+                                    <div>
+                                        <span class="fs-sm fw-light text-color date">Sep 25, 2022</span>
+                                        <a href="product-details.html"><h6 class="mb-0 mt-3 fw-regular">Deal Going Get The Offer For All Products Today</h6></a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="sidebar-widget tags-widget mt-60">
+                            <h4 class="widget-title position-relative fw-normal mb-5">Latest Posts</h4>
+                            <div class="tags">
+                                <a href="#">Dream</a>
+                                <a href="#">Rings</a>
+                                <a href="#">Birthday</a>
+                                <a href="#">Gifts</a>
+                                <a href="#">Neaklace</a>
+                                <a href="#">Chain</a>
+                                <a href="#">Braclet</a>
+                            </div>
+                        </div>
+                        <div class="sidebar-widget instagram-widget mt-60">
+                            <h4 class="widget-title position-relative fw-normal mb-5">Instagram Posts</h4>
+                            <ul class="insta-posts">
+                                <li><a href="#"><img src="assets/images/blog/blog-1.jpg" alt="insta post" class="img-fluid"></a></li>
+                                <li><a href="#"><img src="assets/images/blog/blog-2.jpg" alt="insta post" class="img-fluid"></a></li>
+                                <li><a href="#"><img src="assets/images/blog/blog-3.jpg" alt="insta post" class="img-fluid"></a></li>
+                                <li><a href="#"><img src="assets/images/blog/blog-11.jpg" alt="insta post" class="img-fluid"></a></li>
+                                <li><a href="#"><img src="assets/images/blog/blog-12.jpg" alt="insta post" class="img-fluid"></a></li>
+                                <li><a href="#"><img src="assets/images/blog/blog-13.jpg" alt="insta post" class="img-fluid"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--blog single end-->
+
+
+    <!--newsletter section start-->
+    <section class="newsletter-section light-bg ptb-120 position-relative z-1">
+        <img src="assets/images/shapes/neaklace.png" alt="neaklace" class="position-absolute end-0 top-0 z--1 d-none d-xxl-block">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6">
+                    <div class="newsletter-box text-center">
+                        <span class="fs-sm fw-light secondary-text-color">GET OUR NEWSLETTER</span>
+                        <h2 class="fw-normal mt-4 mb-50">Get News & Update to Your Inbox</h2>
+                        <form class="newsletter-form d-flex align-items-center">
+                            <input type="email" placeholder=" Email address...">
+                            <button type="submit" class="template-btn primary-btn"><span>Subscribe</span></button>
+                        </form>
+                        <p class="mb-0 mt-32 fw-light">Will be used accordance with our <a href="#" class="text-decoration-underline primary-text-color hover-secondary">Privacy Policy</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--newsletter section end-->
+
+    <!--footer section start-->
+    <footer class="footer-style-3 primary-bg-color pt-120 pb-3 pb-xl-0">
+        <div class="container-large">
+            <div class="row">
+                <div class="col-xl-8">
+                    <div class="row g-4">
+                        <div class="col-xxl-4 col-xl-5 col-lg-3 col-md-6">
+                            <div class="ur3-footer-widget">
+                                <a href="index.html" class="footer-logo"><img src="assets/images/logo.png" alt="logo" class="img-fluid"></a>
+                                <span class="text-white fw-medium fs-sm d-block mt-40">Quick Contact</span>
+                                <a href="#"><h3 class="text-white fw-normal mt-1">+(286) - 0124.21563</h3></a>
+                                <div class="ur3-footer-social mt-32">
+                                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i class="fab fa-twitter"></i></a>
+                                    <a href="#"><i class="fab fa-instagram"></i></a>
+                                    <a href="#"><i class="fab fa-youtube"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xxl-3 col-xl-2 col-lg-3 ps-lg-5 ps-xl-0 col-md-6">
+                            <div class="ur3-footer-widget">
+                                <h4 class="text-white widget-title mb-40 fw-normal">Useful Links</h4>
+                                <ul class="ur3-footer-links">
+                                    <li><a href="#">Collections</a></li>
+                                    <li><a href="#">Deals</a></li>
+                                    <li><a href="#">Necklaces</a></li>
+                                    <li><a href="#">Bestsellers</a></li>
+                                    <li><a href="#">Combos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2 col-xl-3 ps-xl-5 ps-xxl-0 col-lg-3 col-md-6">
+                            <div class="ur3-footer-widget">
+                                <h4 class="text-white widget-title mb-40 fw-normal">Useful Links</h4>
+                                <ul class="ur3-footer-links">
+                                    <li><a href="#">Collections</a></li>
+                                    <li><a href="#">Deals</a></li>
+                                    <li><a href="#">Necklaces</a></li>
+                                    <li><a href="#">Bestsellers</a></li>
+                                    <li><a href="#">Combos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xxl-2 offset-xxl-1 col-xl-2 col-lg-3 col-md-6">
+                            <div class="ur3-footer-widget">
+                                <h4 class="text-white widget-title mb-40 fw-normal">Useful Links</h4>
+                                <ul class="ur3-footer-links">
+                                    <li><a href="#">Collections</a></li>
+                                    <li><a href="#">Deals</a></li>
+                                    <li><a href="#">Necklaces</a></li>
+                                    <li><a href="#">Bestsellers</a></li>
+                                    <li><a href="#">Combos</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ur3-newsletter-box mt-60">
+                        <div class="row g-3 g-sm-4 align-items-center">
+                            <div class="col-xl-5 col-lg-6">
+                                <div class="ur3-newsletter-content">
+                                    <h3 class="mb-4 text-white">Our Newsletter</h3>
+                                    <p class="mb-0 fw-light text-color">Pretium etiam imperdiet interdum porttitor urna eget inceptos felis ultricies libero</p>
+                                </div>
+                            </div>
+                            <div class="col-xl-7 col-lg-6 col-md-8">
+                                <form class="ur3-newsletter-form d-flex align-items-center gap-4">
+                                    <input type="text" placeholder="Enter your email" class="theme-input">
+                                    <button type="submit" class="template-btn secondary-btn flex-shrink-0"><span>Subscribe Now</span></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ur3-footer-copyright">
+                        <div class="row align-items-center g-3">
+                            <div class="col-md-6">
+                                <p class="mb-0 text-white">© 2022 Uroan. All Rights Reserved</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-end">
+                                    <img src="assets/images/icons/cards.png" alt="cards" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4">
+                    <ul class="footer-instagram-gallery ps-xl-5">
+                        <li>
+                            <img src="assets/images/gallery/insta-1.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-1.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-2.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-2.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-3.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-3.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-4.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-4.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-5.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-5.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-6.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-6.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-7.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-7.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-8.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-8.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                            <img src="assets/images/gallery/insta-9.jpg" alt="gallery image" class="img-fluid">
+                            <a href="assets/images/gallery/insta-9.jpg" data-fancybox="gallery2"><i class="fab fa-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer> 
+    <!--footer section end-->
+
+
+    <!--scroll top button start-->
+    <button type="button" class="scroll-top-btn"><i class="fa-solid fa-hand-pointer"></i></button>
+    <!--scroll top button end-->
+
+
+    <!--Esential Js Files-->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/popper.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
+    <script src="assets/js/nice-select.js"></script>
+    <script src="assets/js/fancybox.js"></script>
+    <script src="assets/js/countdown.min.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    
+</body>
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/blog-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 09:45:20 GMT -->
+</html>

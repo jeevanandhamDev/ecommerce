@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 09:44:57 GMT -->
+<head>
+    <meta charset="UTF-8">
+<!--    <meta name="_csrf" th:content="${_csrf.token}"/>-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uroan - Shop Grid</title>
+
+    <!--Essential css files-->
+    <link rel="stylesheet" th:href="@{/css/all.css}">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/slick.css}">
+    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
+    <link rel="stylesheet" th:href="@{/css/nice-select.css}">
+    <link rel="stylesheet" th:href="@{/css/fancybox.css}">
+    <link rel="stylesheet" th:href="@{/css/animate.css}">
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+
+    <!--favicon-->
+    <link rel="icon" th:href="@{/images/favicon.png}">
+
+</head>
+<body>
+
+<!--preloader start-->
+
+<!--preloader end-->
+
+<!--header section start-->
+<div th:replace="~{fragments/header :: header}"></div><!--header section end-->
+
+<!--offcanvus start-->
+<div class="offcanvus-box position-fixed bg-white">
+    <a href="@{/javascript:void(0)" class="offcanvus-close"><i class="fa-solid fa-xmark"></i></a>
+    <div class="content-top mb-100">
+        <a th:href="@{/index.html}" class="offcanvus-logo"><img th:src="@{/images/logo-black.png}" alt="logo"></a>
+        <p class="mb-0 mt-32 fw-light">Distrak Street 2SK Line, Germanygalore@inside-support.com (+125) 2156-2145</p>
+    </div>
+    <div class="offcanvus-gallery d-flex align-items-center flex-wrap">
+        <a href="#"><img th:src="@{/images/gallery/1.jpg}" alt="not found"></a>
+        <a href="#"><img th:src="@{/images/gallery/2.jpg}" alt="not found"></a>
+        <a href="#"><img th:src="@{/images/gallery/3.jps}" alt="not found"></a>
+        <a href="#"><img th:src="@{/images/gallery/4.jps}" alt="not found"></a>
+        <a href="#"><img th:src="@{/images/gallery/5.jps}" alt="not found"></a>
+        <a href="#"><img th:src="@{/images/gallery/6.jps}" alt="not found"></a>
+    </div>
+    <div class="offcanvus-newsletter">
+        <h4 class="mb-4 text-center">Newsletter</h4>
+        <form action="#">
+            <input type="email" placeholder="Enter your e-mail" class="theme-input">
+            <button type="submit" class="template-btn primary-btn mt-3 w-100"><span>SUBSCRIBE NOW</span></button>
+        </form>
+    </div>
+    <div class="offcanvus-bottom d-flex align-items-center justify-content-between">
+        <div class="language-switcher">
+            <div class="dropdown">
+                <button type="button" data-bs-toggle="dropdown"><img th:src="@{/images/icons/flag-usa.png}" alt="flag">English <span><i class="fas fa-angle-down"></i></span></button>
+                <ul class="dropdown-menu">
+                    <li><a href="#"><img th:src="@{/images/icons/flag-bd.jps}" alt="flag">Bangla</a></li>
+                    <li><a href="#"><img th:src="@{/images/icons/flag-india.jps}" alt="flag">Hindi</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="currency-switcher">
+            <select>
+                <option>USD</option>
+                <option>BDT</option>
+                <option>CNY</option>
+            </select>
+        </div>
+        <div class="user-links">
+            <a th:href="@{/login.html}"><span class="me-2"><i class="fa-regular fa-user"></i></span>Account</a>
+        </div>
+    </div>
+</div>
+<!--offcanvus end-->
+
+<!--mobile menu start-->
+<div class="mobile-menu">
+    <a href="@{/javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+    <a href="#" class="logo"><img th:src="@{/images/logo-black.jps}" alt="logo" class="img-fluid"></a>
+    <ul class="mobile-nav-menu">
+        <li class="has-submenu">
+            <a href="@{/javascript:void(0)">Home</a>
+            <i class="fas fa-angle-down"></i>
+            <ul class="submenu-wrapper">
+                <li><a th:href="@{/index.html}">Home Page 1</a></li>
+                <li><a th:href="@{/index-2.html}">Home Page 2</a></li>
+                <li><a th:href="@{/index-3.html}">Home Page 3</a></li>
+            </ul>
+        </li>
+        <li><a th:href="@{/about.html}">About</a></li>
+        <li class="has-submenu"><a href="@{/javascript:void(0)">Pages</a>
+            <i class="fas fa-angle-down"></i>
+            <ul class="submenu-wrapper">
+                <li><a th:href="@{/cart.html}">Cart</a></li>
+                <li><a th:href="@{/checkout.html}">Checkout</a></li>
+                <li><a th:href="@{/faq.html}">Faq</a></li>
+                <li><a th:href="@{/wishlist.html}">Wishlist</a></li>
+                <li><a th:href="@{/order-tracking.html}">Order Tracking</a></li>
+            </ul>
+
+        </li>
+        <li class="has-submenu"><a href="@{/javascript:void(0)">Blog</a>
+            <i class="fas fa-angle-down"></i>
+            <ul class="submenu-wrapper">
+                <li><a th:href="@{/blog.html}">Blog List</a></li>
+                <li><a th:href="@{/blog-single.html}">Blog Details</a></li>
+            </ul>
+        </li>
+        <li class="has-submenu"><a href="@{/javascript:void(0)">Shop</a>
+            <i class="fas fa-angle-down"></i>
+            <ul class="submenu-wrapper">
+                <li><a th:href="@{/shop.html}">Shop Grid</a></li>
+                <li><a th:href="@{/shop-list.html}">Shop List</a></li>
+                <li><a th:href="@{/product-details.html}">Product Details</a></li>
+                <li><a th:href="@{/product-details-2.html}">Product Details V2</a></li>
+                <li><a th:href="@{/product-details-3.html}">Product Details V3</a></li>
+            </ul>
+        </li>
+        <li><a th:href="@{/wishlist.html}">Wishlist</a></li>
+        <li><a th:href="@{/contact.html}">Contact</a></li>
+    </ul>
+    <form class="mobile-search d-flex align-items-center mt-5" action="#">
+        <input type="text" placeholder="Search..." class="theme-input">
+        <button type="submit" class="template-btn primary-btn"><span>Go</span></button>
+    </form>
+</div>
+<!--mobile menu end-->
+
+<!--search form start-->
+<div class="ur-search-form">
+    <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+    <form action="#" class="d-flex align-items-center">
+        <input type="text" placeholder="Search...." class="theme-input">
+        <button type="submit" class="submit-btn">Go</button>
+    </form>
+</div>
+<!--search form end-->
+
+<!--cart drawer start-->
+<div class="cart-drawer position-fixed">
+    <div class="drawer-close d-flex align-items-center justify-content-between position-absolute start-0 top-0 w-100 px-4 py-4 border-bottom">
+        <h6 class="mb-0">Shopping Cart</h6>
+        <a href="@{/javascript:void(0)" class="drawer-close"><i class="fas fa-xmark"></i></a>
+    </div>
+    <ul class="cart-list">
+        <li class="d-flex align-items-center gap-3">
+            <div class="feature-image light-bg">
+                <a th:href="@{/product-details.html}"><img th:src="@{/images/products/product-1.png}" alt="feature image" class="img-fluid"></a>
+            </div>
+            <div class="d-flex justify-content-between gap-3 w-100">
+                <div>
+                    <a th:href="@{/product-details.html}"><h6 class="mb-1">Weeding Rings</h6></a>
+                    <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                    <div class="quantity d-flex align-items-center">
+                        <input type="text" value="1">
+                        <div class="step-btns">
+                            <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                            <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="@{/javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                </div>
+            </div>
+        </li>
+        <li class="d-flex align-items-center gap-4">
+            <div class="feature-image light-bg">
+                <a th:href="@{/product-details.html}"><img th:src="@{/images/products/product-2.png}" alt="feature image" class="img-fluid"></a>
+            </div>
+            <div class="d-flex justify-content-between gap-3 w-100">
+                <div>
+                    <a th:href="@{/product-details.html}"><h6 class="mb-1">Diamond Rings</h6></a>
+                    <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                    <div class="quantity d-flex align-items-center">
+                        <input type="text" value="1">
+                        <div class="step-btns">
+                            <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                            <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="@{/javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                </div>
+            </div>
+        </li>
+        <li class="d-flex align-items-center gap-4">
+            <div class="feature-image light-bg">
+                <a th:href="@{/product-details.html}"><img th:src="@{/images/products/product-3.png}" alt="feature image" class="img-fluid"></a>
+            </div>
+            <div class="d-flex justify-content-between gap-3 w-100">
+                <div>
+                    <a th:href="@{/product-details.html}"><h6 class="mb-1">Bracelets Gold</h6></a>
+                    <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                    <div class="quantity d-flex align-items-center">
+                        <input type="text" value="1">
+                        <div class="step-btns">
+                            <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                            <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <div class="drawer-bottom border-top">
+        <div class="d-flex align-items-center justify-content-between mt-4">
+            <h6 class="mb-0">Total:</h6>
+            <span class="fw-medium secondary-text-color">$750.00</span>
+        </div>
+        <a th:href="@{/cart.html}" class="template-btn primary-btn text-uppercase fw-medium w-100 text-center mt-4"><span>View Cart & Check Out</span></a>
+    </div>
+</div>
+<!--cart drawer end-->
+
+<!--breadcrumb section start-->
+<div class="breadcrumb-section pt-40 pb-40" data-background="images/shapes/breadcrumb-bg.jps}">
+    <div class="container">
+        <p class="breadcrumb-text fw-light mb-0"><a th:href="@{/index.html}">Home</a>/<span class="primary-text-color">Shop Grid Layout</span></p>
+    </div>
+</div>
+<!--breadcrumb section end-->
+
+<!--shop section start-->
+<section class="shop-section bg-white ptb-120">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-xl-4 order-2 order-xl-1">
+                <div class="shop-sidebar pe-xl-5 mt-5 mt-xl-0">
+                    <div class="sidebar-widget search-widget">
+                        <form>
+                            <input type="text" placeholder="Search Here..." class="theme-input fw-light">
+                        </form>
+                    </div>
+                    <!-- Sidebar with Categories -->
+                    <div class="sidebar-widget categories-widget mt-60">
+                        <h4 class="widget-title position-relative fw-normal mb-5">Categories</h4>
+                        <ul class="sidebar-check-fields">
+                            <li><a th:href="@{/shop}">All</a></li>
+                            <li th:each="cat : ${categories}">
+                                <a th:href="@{/shop/category/{category}(category=${cat})}" th:text="${cat}">Category</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <form th:action="@{/shop/filter}" method="get" class="d-flex align-items-center justify-content-between mt-4">
+                        <input type="hidden" id="min" name="min">
+                        <input type="hidden" id="max" name="max">
+                        <p class="mb-0">
+                            <label for="amount">Price:</label>
+                            <input type="text" id="amount" readonly>
+                        </p>
+                        <button type="submit" class="submit-btn">
+                            Filter<span class="ms-2"><i class="fas fa-arrow-right"></i></span>
+                        </button>
+                    </form>
+
+                    <!-- Include jQuery UI -->
+                    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+                    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+                    <script>
+                        $(function () {
+                            $("#slider-range").slider({
+                                range: true,
+                                min: 0,
+                                max: 10000,
+                                values: [1000, 5000],
+                                slide: function (event, ui) {
+                                    $("#amount").val("₹" + ui.values[0] + " - ₹" + ui.values[1]);
+                                    $("#min").val(ui.values[0]);
+                                    $("#max").val(ui.values[1]);
+                                }
+                            });
+
+                            // Set initial values
+                            $("#amount").val("₹" + $("#slider-range").slider("values", 0) +
+                                " - ₹" + $("#slider-range").slider("values", 1));
+                            $("#min").val($("#slider-range").slider("values", 0));
+                            $("#max").val($("#slider-range").slider("values", 1));
+                        });
+                    </script>
+
+                    <!-- Slider container -->
+                    <div id="slider-range" class="ur-pricing-range"></div>
+
+                    <div class="sidebar-widget color-select-widget mt-60">
+                        <h4 class="widget-title position-relative mb-5">Select Color</h4>
+                        <ul class="color-select">
+                            <li><label><input type="checkbox"><span class="bg-soft-gold">Soft Gold <span>(12)</span></span></label></li>
+                            <li><label><input type="checkbox"><span class="bg-light-pink">Light Pink <span>(05)</span></span></label></li>
+                            <li><label><input type="checkbox"><span class="bg-green-touch">Green Touch <span>(02)</span></span></label></li>
+                            <li><label><input type="checkbox"><span class="bg-navy-blue">Navy Blue <span>(05)</span></span></label></li>
+                            <li><label><input type="checkbox"><span class="bg-gray-white">Gray White <span>(16)</span></span></label></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget brand-widget mt-60">
+                        <h4 class="widget-title position-relative fw-normal mb-5">Brands</h4>
+                        <ul class="sidebar-check-fields">
+                            <li><label><input type="checkbox"> <span>Juliate <span>(09)</span></span></label></li>
+                            <li><label><input type="checkbox"> <span>H&M <span>(50)</span></span></label></li>
+                            <li><label><input type="checkbox"> <span>Macro <span>(08)</span></span></label></li>
+                            <li><label><input type="checkbox"> <span>Harmoni <span>(13)</span></span></label></li>
+                            <li><label><input type="checkbox"> <span>Sowat <span>(03)</span></span></label></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-widget products-widget mt-60">
+                        <h4 class="widget-title position-relative mb-5">Latest products</h4>
+                        <ul class="sidebar-products">
+                            <li class="d-flex align-items-center gap-4">
+                                <div class="flex-shrink-0 thumbnail light-bg p-2">
+                                    <a th:href="@{/product-details.html}"><img th:src="@{/images/products/product-1.png}" alt="thumbnail" class="img-fluid"></a>
+                                </div>
+                                <div>
+                                    <a th:href="@{/product-details.html}"><h6 class="mb-3">Pure Shine Gold</h6></a>
+                                    <span class="price primary-text-color">$165.00</span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-4">
+                                <div class="flex-shrink-0 thumbnail light-bg p-2">
+                                    <a th:href="@{/product-details.html}"><img th:src="@{/images/products/product-2.png}" alt="thumbnail" class="img-fluid"></a>
+                                </div>
+                                <div>
+                                    <a th:href="@{/product-details.html}"><h6 class="mb-3">Delight Hiy Ring</h6></a>
+                                    <span class="price primary-text-color">$150.00</span>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center gap-4">
+                                <div class="flex-shrink-0 thumbnail light-bg p-2">
+                                    <a th:href="@{/product-details.html}"><img th:src="@{/images/products/product-3.png}" alt="thumbnail" class="img-fluid"></a>
+                                </div>
+                                <div>
+                                    <a th:href="@{/product-details.html}"><h6 class="mb-3">White Ball Gold</h6></a>
+                                    <span class="price primary-text-color">$125.00</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 order-1 order-xl-2">
+                <div class="shop-grid">
+                    <div class="d-flex align-items-center justify-content-between gap-3 flex-wrap">
+                        <p class="mb-0 fw-light">Showing 1-12 of 88 results</p>
+                        <div class="d-flex align-items-center gap-4">
+                            <div class="select-wrapper">
+                                <select class="nice_select">
+                                    <option>Default Sorting</option>
+                                    <option>Sort by Price</option>
+                                    <option>Sort by Popularity</option>
+                                </select>
+                            </div>
+                            <div class="layout-grid d-flex align-items-center">
+                                <a th:href="@{/shop}" class="active">
+                                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="10.7139" width="9" height="3" fill="#121111"/>
+                                        <rect x="10.7139" y="7" width="9" height="3" fill="#121111"/>
+                                        <rect x="10.7139" y="14" width="9" height="3" fill="#121111"/>
+                                        <rect width="9" height="3" fill="#121111"/>
+                                        <rect y="7" width="9" height="3" fill="#121111"/>
+                                        <rect y="14" width="9" height="3" fill="#121111"/>
+                                    </svg>
+                                </a>
+                                <a th:href="@{/shop-list.html}">
+                                    <svg width="20" height="17" viewBox="0 0 20 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="5.71387" width="14.2857" height="3" fill="#121111"/>
+                                        <rect x="5.71387" y="7" width="14.2857" height="3" fill="#121111"/>
+                                        <rect x="5.71387" y="14" width="14.2857" height="3" fill="#121111"/>
+                                        <rect width="3.80952" height="3" fill="#121111"/>
+                                        <rect y="7" width="3.80952" height="3" fill="#121111"/>
+                                        <rect y="14" width="3.80952" height="3" fill="#121111"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Grid -->
+                    <div class="products-grid mt-40">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6" th:each="product : ${products}">
+                                <div class="ur-product-card position-relative card-sm-small">
+                                    <span class="position-absolute ur-badge coupon-badge">50%</span>
+
+                                    <!-- Product Image -->
+                                    <div class="feature-image d-flex align-items-center justify-content-center light-bg position-relative">
+                                        <img th:src="@{${product.imagePath}}" alt="Product Image" width="200" height="200" />
+                                        <div class="product-overlay position-absolute">
+                                            <div class="product-btns d-flex align-items-center justify-content-between">
+                                                <form method="post"
+                                                      th:action="@{/wishlist/add/{productId}(productId=${product.id})}"
+                                                      style="display: inline;">
+                                                    <input type="hidden"
+                                                    />
+
+                                                    <button type="submit" style="background: none; border: none; padding: 0;">
+                                                        <i class="fa-regular fa-heart" id="wishlist-icon-[[${product.id}]]"></i>
+                                                    </button>
+                                                </form>
+
+
+
+
+
+
+                                                <a href="javascript:void(0)"><i class="fa-solid fa-basket-shopping"></i></a>
+                                                <a href="#" class="btn btn-sm btn-outline-dark"
+                                                   data-bs-toggle="modal"
+                                                   th:attr="data-bs-target='#product_quickview_' + ${product.id}">
+                                                    <i class="fa-regular fa-eye"></i>
+                                                </a>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Product Info -->
+                                    <div class="mt-4">
+                                        <!-- Category -->
+                                        <a href="#" class="secondary-text-color text-uppercase" th:text="${product.category}">Category</a>
+
+                                        <!-- Product Name -->
+                                        <a th:href="@{/product-details/{id}(id=${product.id})}">
+                                            <h5 class="my-2 fw-medium product-title" th:text="${product.productName}">Product Name</h5>
+                                        </a>
+
+                                        <!-- Price: display the first value from pricesJson (assuming JSON array format like "[199,299]") -->
+                                        <span class="primary-text-color fs-sm fw-medium"
+                                              th:if="${product.pricesJson != null and product.pricesJson.contains(',')}"
+                                              th:text="'₹' + ${#strings.trim(product.pricesJson.replace('[','').replace(']','').split(',')[0])}">
+        ₹0.00
+    </span>
+
+                                        <span class="primary-text-color fs-sm fw-medium"
+                                              th:if="${product.pricesJson != null and !product.pricesJson.contains(',')}"
+                                              th:text="'₹' + ${#strings.trim(product.pricesJson.replace('[','').replace(']',''))}">
+        ₹0.00
+    </span>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-center mt-60">
+                        <ul class="template-pagination d-inline-flex align-items-center gap-3">
+                            <li><a href="#" class="active">01</a></li>
+                            <li><a href="#">02</a></li>
+                            <li><a href="#">03</a></li>
+                            <li><a href="#">04</a></li>
+                            <li><a href="#"><i class="fa-solid fa-angles-right"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--shop section end-->
+
+<!--newsletter section start-->
+
+<!--newsletter section end-->
+
+<!--footer section start-->
+<div th:replace="~{fragments/footer :: footer}"></div>
+<!--footer section end-->
+
+
+<!--scroll top button start-->
+<button type="button" class="scroll-top-btn"><i class="fa-solid fa-hand-pointer"></i></button>
+<!--scroll top button end-->
+
+
+<!--product modal start-->
+
+
+<th:block th:each="product : ${products}">
+    <div class="modal fade" th:id="'product_quickview_' + ${product.id}" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content p-4">
+                <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal"></button>
+                <div class="row">
+                    <div class="col-xl-6">
+                        <div class="feature-image bg-light">
+                            <img th:src="@{${product.imagePath}}" alt="Product Image" class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="single-product-info">
+                            <a href="#" class="category-btn text-uppercase fs-sm secondary-text-color d-inline-block mb-3" th:text="${product.category}"></a>
+                            <h3 class="mb-4" th:text="${product.productName}"></h3>
+
+                            <div class="item-review d-flex align-items-center gap-3">
+                                <ul class="rating-star d-flex align-items-center gap-1 fs-sm">
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                    <li><i class="fas fa-star"></i></li>
+                                </ul>
+                                <span class="primary-text-color fw-light">(0 Customer reviews)</span>
+                            </div>
+
+                            <div class="pricing mt-4">
+                                <span class="primary-text-color"
+                                      th:text="'₹' + ${#strings.replace(product.pricesJson, '[', '').replace(']', '').split(',')[0]}">
+                                    ₹0.00
+                                </span>
+                            </div>
+
+                            <div class="short-description mt-40">
+                                <p class="mb-0 fw-light" th:text="${product.productDescription}"></p>
+                            </div>
+
+                            <ul class="single-product-features mt-40">
+                                <li><span class="me-2"><i class="fas fa-truck"></i></span>Free shipping</li>
+                                <li><span class="me-2"><i class="fas fa-undo-alt"></i></span>Free returns</li>
+                            </ul>
+
+                            <div class="d-flex align-items-center mt-40 gap-3 flex-wrap">
+                                <div class="quantity-box">
+                                    <button type="button" class="drecrement"><i class="fa-solid fa-minus"></i></button>
+                                    <input type="text" value="1">
+                                    <button type="button" class="drecrement"><i class="fa-solid fa-plus"></i></button>
+                                </div>
+
+                                <button type="button"
+                                        onclick="addToCart(this)"
+                                        class="add_to_cart_btn"
+                                        th:data-name="${product.productName}"
+                                        th:data-imageurl="${product.imagePath}"
+                                        th:data-price="${#strings.replace(product.pricesJson, '[', '').replace(']', '').split(',')[0]}"
+                                        th:data-id="${product.id}">
+                                    Add to Cart
+                                    <span class="ms-2"><i class="fa-solid fa-basket-shopping"></i></span>
+                                </button>
+
+                                <form action="/wishlist/add/${product.id}" method="post">
+                                    <button type="submit" class="wish_btn">
+                                        <span class="me-2"><i class="fa-regular fa-heart"></i></span>
+                                        Add to Wishlist
+                                    </button>
+                                </form>
+
+                            </div>
+
+                            <ul class="product-meta mt-32">
+                                <li>SKU: <span th:text="${product.sku}"></span></li>
+                                <li>Weights: <span th:text="${product.weightsJson}"></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</th:block>
+
+
+<!--product modal end-->
+
+
+<!--Esential Js Files-->
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/popper.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/slick.js}"></script>
+<script th:src="@{/js/jquery-ui.js}"></script>
+<script th:src="@{/js/nice-select.js}"></script>
+<script th:src="@{/js/fancybox.js}"></script>
+<script th:src="@{/js/countdown.min.js}"></script>
+<script th:src="@{/js/wow.js}"></script>
+<script th:src="@{/js/script.js}"></script>
+
+<script>
+    document.querySelectorAll('.btn-outline-dark').forEach(button => {
+    button.addEventListener('click', function (event) {
+        // Get data attributes from the clicked button
+        const productData = event.target.closest('a');
+
+        // Update modal content
+        document.getElementById('modalImage').src = productData.getAttribute('data-image');
+        document.getElementById('modalCategory').innerText = productData.getAttribute('data-category');
+        document.getElementById('modalName').innerText = productData.getAttribute('data-name');
+        document.getElementById('modalDescription').innerText = productData.getAttribute('data-description');
+        document.getElementById('modalPrice').innerText = '₹' + productData.getAttribute('data-prices').split(',')[0]; // Display first price
+        document.getElementById('modalSku').innerText = productData.getAttribute('data-sku');
+        document.getElementById('modalWeights').innerText = productData.getAttribute('data-weights');
+    });
+});
+
+
+</script>
+
+<script>
+    function addToWishlist(productId) {
+        fetch(`/wishlist/add/${productId}`, {
+            method: 'POST',
+            headers: {
+                'X-CSRF-TOKEN': document.querySelector('meta[name="_csrf"]').getAttribute('content')
+            }
+        })
+        .then(response => {
+            if (response.status === 401) {
+                window.location.href = "/userLogin";
+            } else if (response.ok) {
+                // Success, update heart icon
+                const icon = document.getElementById(`wishlist-icon-${productId}`);
+                icon.classList.remove('fa-regular');
+                icon.classList.add('fa-solid');
+                alert("Added to wishlist!");
+            } else {
+                alert("Error adding to wishlist");
+            }
+        })
+        .catch(error => {
+            console.error("Error adding to wishlist", error);
+        });
+    }
+
+    function addToCart(button) {
+    const productId = button.getAttribute("data-id");
+    const price = parseFloat(button.getAttribute("data-price"));
+
+    const formData = new URLSearchParams();
+    formData.append("productId", productId);
+    formData.append("price", price);
+
+    fetch("/add-to-cart", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+        },
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        if (data === "success") {
+            alert("Item added to cart!");
+        } else if (data === "not_logged_in") {
+            alert("Please log in to add items to your cart.");
+            window.location.href = "/userLogin";
+        } else {
+            alert("Something went wrong.");
+        }
+    });
+}
+
+</script>
+<script>
+
+</script>
+<script>
+    function submitWishlistForm(productId) {
+        const form = document.getElementById(`wishlist-form-${productId}`);
+        if (form) {
+            form.submit();
+        } else {
+            console.error("Form not found for productId:", productId);
+        }
+    }
+</script>
+
+
+</body>
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/shop.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 09:44:57 GMT -->
+</html>

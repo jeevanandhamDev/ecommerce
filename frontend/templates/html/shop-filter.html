@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Filtered Products</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" th:href="@{/css/style.css}" /> <!-- optional -->
+</head>
+<body>
+<h1>Filtered Products</h1>
+
+<div th:if="${#lists.isEmpty(products)}">
+  <p>No products found in the selected price range.</p>
+</div>
+
+<div th:if="${not #lists.isEmpty(products)}">
+  <ul>
+    <li th:each="product : ${products}">
+      <div>
+        <h3 th:text="${product.ProductName}">Product Name</h3>
+        <p th:text="${product.productDescription}">Product Description</p>
+
+<!--        <div th:if="${product.imageUrl != null}">-->
+<!--          <img th:src="@{${product.imagePath}}" alt="Image" width="150">-->
+<!--        </div>-->
+
+<!--        <p>-->
+<!--          Price:-->
+<!--          <span th:text="${#strings.substring(product.pricesJson, 1, product.pricesJson.indexOf(','))}">1000</span>-->
+<!--        </p>-->
+      </div>
+      <hr>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

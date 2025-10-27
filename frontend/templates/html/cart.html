@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" class="modern fixed has-top-menu has-left-sidebar-half" data-style-switcher-options="{'changeLogo': false}">
+
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 09:45:16 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uroan - Cart Page</title>
+
+    <!--Essential css files-->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!--favicon-->
+    <link rel="icon" href="images/favicon.png">
+
+</head>
+<body>
+
+    <!--preloader start-->
+<!--    <div class="preloader">-->
+<!--        <h1 class="display-1">UROAN</h1>-->
+<!--        <div class="preload-progress">-->
+<!--            <span></span>-->
+<!--        </div>-->
+<!--    </div>-->
+    <!--preloader end-->
+
+    <!--header section start-->
+    <div th:replace="~{fragments/header :: header}"></div>
+    <!--header section end-->
+
+    <!--offcanvus start-->
+    <div class="offcanvus-box position-fixed bg-white">
+        <a href="javascript:void(0)" class="offcanvus-close"><i class="fa-solid fa-xmark"></i></a>
+        <div class="content-top mb-100">
+            <a href="index.html" class="offcanvus-logo"><img src="images/logo-black.png" alt="logo"></a>
+            <p class="mb-0 mt-32 fw-light">Distrak Street 2SK Line, Germanygalore@inside-support.com (+125) 2156-2145</p>
+        </div>
+        <div class="offcanvus-gallery d-flex align-items-center flex-wrap">
+            <a href="#"><img src="images/gallery/1.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/2.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/3.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/4.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/5.jpg" alt="not found"></a>
+            <a href="#"><img src="images/gallery/6.jpg" alt="not found"></a>
+        </div>
+        <div class="offcanvus-newsletter">
+            <h4 class="mb-4 text-center">Newsletter</h4>
+            <form action="#">
+                <input type="email" placeholder="Enter your e-mail" class="theme-input">
+                <button type="submit" class="template-btn primary-btn mt-3 w-100"><span>SUBSCRIBE NOW</span></button>
+            </form>
+        </div>
+        <div class="offcanvus-bottom d-flex align-items-center justify-content-between">
+            <div class="language-switcher">
+                <div class="dropdown">
+                    <button type="button" data-bs-toggle="dropdown"><img src="images/icons/flag-usa.png" alt="flag">English <span><i class="fas fa-angle-down"></i></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#"><img src="images/icons/flag-bd.jpg" alt="flag">Bangla</a></li>
+                        <li><a href="#"><img src="images/icons/flag-india.jpg" alt="flag">Hindi</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="currency-switcher">
+                <select>
+                    <option>USD</option>
+                    <option>BDT</option>
+                    <option>CNY</option>
+                </select>
+            </div>
+            <div class="user-links">
+                <a href="login.html"><span class="me-2"><i class="fa-regular fa-user"></i></span>Account</a>
+            </div>
+        </div>
+    </div>
+    <!--offcanvus end-->
+
+    <!--mobile menu start-->
+    <div class="mobile-menu">
+        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+        <a href="#" class="logo"><img src="images/logo-black.jpg" alt="logo" class="img-fluid"></a>
+        <ul class="mobile-nav-menu">
+            <li class="has-submenu">
+                <a href="javascript:void(0)">Home</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="index.html">Home Page 1</a></li>
+                    <li><a href="index-2.html">Home Page 2</a></li>
+                    <li><a href="index-3.html">Home Page 3</a></li>
+                </ul>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li class="has-submenu"><a href="javascript:void(0)">Pages</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="wishlist.html">Wishlist</a></li>
+                    <li><a href="order-tracking.html">Order Tracking</a></li>
+                </ul>
+                
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Blog</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="blog.html">Blog List</a></li>
+                    <li><a href="blog-single.html">Blog Details</a></li>
+                </ul>
+            </li>
+            <li class="has-submenu"><a href="javascript:void(0)">Shop</a>
+                <i class="fas fa-angle-down"></i>
+                <ul class="submenu-wrapper">
+                    <li><a href="shop.html">Shop Grid</a></li>
+                    <li><a href="shop-list.html">Shop List</a></li>
+                    <li><a href="product-details.html">Product Details</a></li>
+                    <li><a href="product-details-2.html">Product Details V2</a></li>
+                    <li><a href="product-details-3.html">Product Details V3</a></li>
+                </ul>
+            </li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <form class="mobile-search d-flex align-items-center mt-5" action="#">
+            <input type="text" placeholder="Search..." class="theme-input">
+            <button type="submit" class="template-btn primary-btn"><span>Go</span></button>
+        </form>
+    </div>
+    <!--mobile menu end-->
+
+    <!--search form start-->
+    <div class="ur-search-form">
+        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+        <form action="#" class="d-flex align-items-center">
+            <input type="text" placeholder="Search...." class="theme-input">
+            <button type="submit" class="submit-btn">Go</button>
+        </form>
+    </div>
+    <!--search form end-->
+
+    <!--cart drawer start-->
+    <div class="cart-drawer position-fixed">
+        <div class="drawer-close d-flex align-items-center justify-content-between position-absolute start-0 top-0 w-100 px-4 py-4 border-bottom">
+            <h6 class="mb-0">Shopping Cart</h6>
+            <a href="javascript:void(0)" class="drawer-close"><i class="fas fa-xmark"></i></a>
+        </div>
+        <ul class="cart-list">
+            <li class="d-flex align-items-center gap-3">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="images/products/product-1.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Weeding Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="images/products/product-2.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Diamond Rings</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="javascript:void(0)" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+            <li class="d-flex align-items-center gap-4">
+                <div class="feature-image light-bg">
+                    <a href="product-details.html"><img src="images/products/product-3.png" alt="feature image" class="img-fluid"></a>
+                </div>
+                <div class="d-flex justify-content-between gap-3 w-100">
+                    <div>
+                        <a href="product-details.html"><h6 class="mb-1">Bracelets Gold</h6></a>
+                        <span class="price fw-medium secondary-text-color d-block mb-1 fs-sm">$250.00</span>
+                        <div class="quantity d-flex align-items-center">
+                            <input type="text" value="1">
+                            <div class="step-btns">
+                                <button class="increment"><i class="fa-solid fa-angle-up"></i></button>
+                                <button class="decrement"><i class="fa-solid fa-angle-down"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#" class="close"><i class="fas fa-xmark"></i></a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        <div class="drawer-bottom border-top">
+            <div class="d-flex align-items-center justify-content-between mt-4">
+                <h6 class="mb-0">Total:</h6>
+                <span class="fw-medium secondary-text-color">$750.00</span>
+            </div>
+            <a href="cart.html" class="template-btn primary-btn text-uppercase fw-medium w-100 text-center mt-4"><span>View Cart & Check Out</span></a>
+        </div>
+    </div>
+    <!--cart drawer end-->
+
+    <!--breadcrumb section start-->
+    <div class="breadcrumb-section pt-40 pb-40" data-background="images/shapes/breadcrumb-bg.jpg">
+        <div class="container">
+            <p class="breadcrumb-text fw-light mb-0"><a href="index.html">Home</a> / <span class="primary-text-color">Cart</span></p>
+        </div>
+    </div>
+    <!--breadcrumb section end-->
+
+
+    <!-- cart table start -->
+    <div class="ptb-120 bg-white">
+        <div class="container">
+            <div class="cart-table-wrapper table-responsive">
+                <table class="cart-table table">
+                    <tr>
+                        <th class="text-center">Products</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th class="text-end">Subtotal</th>
+                    </tr>
+
+                    <tr th:each="item : ${cartItems}">
+                        <td>
+                            <div class="d-flex align-items-center gap-4 product-box">
+                                <a th:href="@{'/cartRemove'(id=${item.id})}"  >
+                                    <i class="fa fa-close"></i>
+                                </a>
+                                <div class="feature-image light-bg">
+                                    <img th:src="@{${item.imageUrl}}" class="img-fluid" alt="product">
+                                </div>
+                                <div>
+                                    <span class="fs-sm text-uppercase secondary-text-color d-block">Product</span>
+                                    <a href="#" class="product-title h6 mt-2 d-block" th:text="${item.productName}"></a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <span class="fw-medium primary-text-color" th:text="'$' + ${item.price}"></span>
+                        </td>
+                        <td>
+                            <div class="quantity d-flex align-items-center">
+                                <input type="text" th:id="'qty-' + ${item.id}" th:value="${item.quantity}" readonly>
+                                <div class="step-btns">
+                                    <button class="increment" th:data-id="${item.id}"><i class="fa-solid fa-angle-up"></i></button>
+                                    <button class="decrement" th:data-id="${item.id}"><i class="fa-solid fa-angle-down"></i></button>
+                                </div>
+                            </div>
+                        </td>
+
+                        <td>
+                        <span class="primary-text-color fw-medium d-block text-end"
+                              th:text="'$' + ${item.price * item.quantity}"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4">
+                            <div class="d-flex align-items-center justify-content-between gap-4 flex-wrap">
+                                <form class="cart-coupon-form d-flex align-items-center">
+                                    <input type="text" placeholder="Coupon Code" class="theme-input">
+                                    <button type="submit" class="submit-btn">Apply Coupon</button>
+                                </form>
+                                <button type="button" class="template-btn primary-btn"><span>Update Cart</span></button>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- cart table end -->
+
+    <!-- cart calculator -->
+    <section class="pb-120 bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="cart-calculator">
+                        <h3 class="mb-40">Cart Totals</h3>
+                        <form class="cart-calculator-form table-responsive">
+                            <table class="table">
+                                <tr>
+                                    <td>Subtotal</td>
+                                    <td><span th:text="${#numbers.formatDecimal(totalAmount, 1, 2)}"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Shipping</td>
+                                    <td>
+                                        <div class="shipping-method">
+                                            <label>
+                                                <input type="radio" name="shipping">
+                                                <span>Free Shipping</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="shipping">
+                                                <span>Flat Rate</span>
+                                            </label>
+                                            <label>
+                                                <input type="radio" name="shipping">
+                                                <span>Local Pickup</span>
+                                            </label>
+                                            <p class="my-4 fs-sm fw-light">Shipping options will be updated during checkout</p>
+                                            <a href="#" class="primary-text-color">Calculate Shipping</a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Total</td>
+                                    <td th:text="'$' + ${#numbers.formatDecimal(totalAmount, 1, 2)}"></td>
+                                </tr>
+
+                            </table>
+                            <button type="submit" class="template-btn primary-btn text-uppercase mt-5">
+                                <span>Proceed to checkout</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--cart calculator-->
+
+    <!--newsletter section start-->
+    <!--newsletter section end-->
+
+    <!--footer section start-->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+    <!--footer section end-->
+
+
+    <!--scroll top button start-->
+    <button type="button" class="scroll-top-btn"><i class="fa-solid fa-hand-pointer"></i></button>
+    <!--scroll top button end-->
+
+
+
+
+    <!--Esential Js Files-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/slick.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/nice-select.js"></script>
+    <script src="js/fancybox.js"></script>
+    <script src="js/countdown.min.js"></script>
+    <script src="js/wow.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        document.querySelectorAll('.increment').forEach(button => {
+            button.addEventListener('click', () => {
+                const itemId = button.getAttribute('data-id');
+                updateQuantity(itemId, 1); // +1
+            });
+        });
+
+        document.querySelectorAll('.decrement').forEach(button => {
+            button.addEventListener('click', () => {
+                const itemId = button.getAttribute('data-id');
+                updateQuantity(itemId, -1); // -1
+            });
+        });
+
+        function updateQuantity(itemId, delta) {
+            fetch('/update-cart-quantity?id=' + itemId + '&delta=' + delta, {
+                method: 'POST'
+            }).then(() => {
+                window.location.reload(); // Reload page to reflect changes
+            });
+        }
+    </script>
+
+</body>
+
+<!-- Mirrored from html.matethemes.com/uroan/demo/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 26 Apr 2025 09:45:16 GMT -->
+</html>
