@@ -1,0 +1,36 @@
+[25-Mar-2025 13:53:23 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/mannachemicals/public_html/demo/admin/index.php:1651
+Stack trace:
+#0 {main}
+  thrown in /home/mannachemicals/public_html/demo/admin/index.php on line 1651
+[26-Mar-2025 03:34:55 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/mannachemicals/public_html/demo/admin/index.php:1651
+Stack trace:
+#0 {main}
+  thrown in /home/mannachemicals/public_html/demo/admin/index.php on line 1651
+[26-Mar-2025 05:32:16 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/mannachemicals/public_html/demo/admin/index.php:963
+Stack trace:
+#0 {main}
+  thrown in /home/mannachemicals/public_html/demo/admin/index.php on line 963
+[26-Mar-2025 05:51:19 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/mannachemicals/public_html/demo/admin/index.php:963
+Stack trace:
+#0 {main}
+  thrown in /home/mannachemicals/public_html/demo/admin/index.php on line 963
+[26-Mar-2025 05:53:35 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/mannachemicals/public_html/demo/admin/index.php:963
+Stack trace:
+#0 {main}
+  thrown in /home/mannachemicals/public_html/demo/admin/index.php on line 963
+[26-Mar-2025 06:42:54 UTC] PHP Warning:  move_uploaded_file(images/uploads/Screenshot (2).png): failed to open stream: No such file or directory in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:42:54 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpUZI4fD' to 'images/uploads/Screenshot (2).png' in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:43:05 UTC] PHP Warning:  move_uploaded_file(images/uploads/Screenshot (2).png): failed to open stream: No such file or directory in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:43:05 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpAHTmow' to 'images/uploads/Screenshot (2).png' in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:43:58 UTC] PHP Warning:  move_uploaded_file(/images/uploads/Screenshot (2).png): failed to open stream: No such file or directory in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:43:58 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/phpbohEYV' to '/images/uploads/Screenshot (2).png' in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:44:37 UTC] PHP Warning:  move_uploaded_file(/images/uploads/Screenshot (2).png): failed to open stream: No such file or directory in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:44:37 UTC] PHP Warning:  move_uploaded_file(): Unable to move '/tmp/php29pdKt' to '/images/uploads/Screenshot (2).png' in /home/mannachemicals/public_html/demo/admin/save-product.php on line 35
+[26-Mar-2025 06:56:37 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/mannachemicals/public_html/demo/admin/index.php:963
+Stack trace:
+#0 {main}
+  thrown in /home/mannachemicals/public_html/demo/admin/index.php on line 963
+[26-Mar-2025 08:07:25 UTC] PHP Fatal error:  Uncaught Error: Call to a member function fetch_assoc() on null in /home/mannachemicals/public_html/demo/admin/index.php:963
+Stack trace:
+#0 {main}
+  thrown in /home/mannachemicals/public_html/demo/admin/index.php on line 963
